@@ -2,8 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1463cdb6-86a1-4fea-b606-fadc84eb80d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/projet_Cyber-Car/src/admin/finance/controllerAchat.java" beforeDir="false" afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/admin/finance/controllerAchat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_Cyber-Car/src/admin/finance/projet Fxml/2-achat-voiture.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/admin/finance/projet Fxml/2-achat-voiture.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/CyberCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/Consultation de profil.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/Page_Espace_Personnel.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/Recrutement3.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/219986.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Backgorund-Pattern.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Card-Car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Chain Allocation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/DW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Group 1279.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Group 1335.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Icon=Folder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Icon=Subnavigation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/List Menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Method=Yandex.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Portfolios Performance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Rectangle 108.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Rectangle 110.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Rectangle 26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Rectangle 34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/SUIVRE UNE COMMANDE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Side Bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/Standard Collection 3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/bar_chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/bookmarks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/car.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/car_dis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/card 5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/card-automotive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/icon/24/dasboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/icon/24/donate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/icon/24/protocols.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/menu/Vector.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/olav-tvedt--oVaYMgBMbs-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/people_alt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/profile image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash(1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/square.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/vuesax/linear/diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/vuesax/linear/profile-2user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/figma/vuesax/linear/tag-user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Black-Audi-SUV-PNG-Image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Black-Toyota-Camry-PNG-Image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Bugatti-PNG-Pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Chevrolet-Camaro-PNG-Free-Download (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Chevrolet-Camaro-PNG-HD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Chevrolet-Camaro-PNG-Image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Chevrolet-Camaro-PNG-Transparent-Picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Chevrolet-Camaro-Transparent-Background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Chevrolet-Colorado-Pickup-Truck-PNG-Picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Chevrolet-Logo-PNG-Photos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Logo de voiture Tesla PNG HD.webloc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Red-Tesla-Car-PNG-File.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Renault-Logo-PNG-Transparent-Image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Renault-PNG-Pic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Renault-PNG-Transparent-Picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Silver-Audi-SUV-PNG-Transparent-Image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Silver-Audi-SUV-Transparent-Background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Tesla-Car-Logo-PNG-HD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Tesla-Car-PNG-Isolated-Picture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Tesla-Car-PNG-Transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/R-H/R-H/voiture/Toyota-PNG-Photos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/rh/recrutement3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cybercar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cybercar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/ResourceHumaine.java" beforeDir="false" afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine/ResourceHumaine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +88,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.jdks/openjdk-17.0.1/lib" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\El Nadje\OneDrive\Documents\BTS SIO\Ap4.cybercar\projet_Cyber-Car\src\RessourceHumaine" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\El Nadje\OneDrive\Documents\BTS SIO\Ap4.cybercar\projet_Cyber-Car\src\RessourceHumaine" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main²" type="Application" factoryName="Application">
+      <module name="cybercar" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\El Nadje\Downloads\openjfx-17.0.2_windows-x64_bin-sdk(1)\javafx-sdk-17.0.2\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -42,5 +128,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

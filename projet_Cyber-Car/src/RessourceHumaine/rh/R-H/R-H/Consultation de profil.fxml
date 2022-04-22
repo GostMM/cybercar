@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.cells.editors.base.GenericEditableTableCell?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.control.ListView?>
+
+
+<Pane prefHeight="1038.0" prefWidth="1902.0" style="-fx-background-color: linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036)linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView opacity="0.25">
+         <image>
+            <Image url="@figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash(1).jpg" />
+         </image>
+      </ImageView>
+      <BorderPane prefHeight="1038.0" prefWidth="220.0">
+         <top>
+            <ImageView BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@figma/Logo.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets bottom="3.0" left="30.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </top>
+         <left>
+            <Pane style="-fx-background-color: rgba(0,0,0,0.75)rgba(0,0,0,0.75);">
+               <children>
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="50.0" layoutY="122.0" stroke="#861313" strokeLineCap="ROUND" strokeWidth="0.0" text="TABLEAU DE BORD">
+                     <font>
+                        <Font name="Lato Heavy" size="15.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="11.0" layoutY="349.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                  <ImageView layoutX="12.0" layoutY="313.0">
+                     <image>
+                        <Image url="@figma/icon/24/protocols.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="43.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES PROFILS" wrappingWidth="140.26123046875">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="37.0" layoutY="375.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" text="Recrutement" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="36.0" layoutY="440.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="175.0" text="Consultation de profils" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="36.0" layoutY="476.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="175.0" text="Commander Voiture" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Separator layoutX="8.0" layoutY="580.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                  <Text fill="WHITE" layoutX="38.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONSULTER RAPPORT DE VENTE " wrappingWidth="165.93600463867188">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView layoutX="12.0" layoutY="436.0">
+                     <image>
+                        <Image url="@figma/Icon=Subnavigation.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="12.0" layoutY="472.0">
+                     <image>
+                        <Image url="@figma/Icon=Subnavigation.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="9.0" layoutY="545.0">
+                     <image>
+                        <Image url="@figma/icon/24/donate.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="102.0" layoutY="71.0">
+                     <image>
+                        <Image url="@figma/menu/Vector.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="9.0" layoutY="621.0">
+                     <image>
+                        <Image url="@figma/Icon=Subnavigation.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="33.0" layoutY="625.0" mnemonicParsing="false" text="Rapport Journalier " textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView layoutX="8.0" layoutY="657.0">
+                     <image>
+                        <Image url="@figma/Icon=Subnavigation.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="32.0" layoutY="661.0" mnemonicParsing="false" text="Rapport Hebdomaires" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView layoutX="8.0" layoutY="694.0">
+                     <image>
+                        <Image url="@figma/Icon=Subnavigation.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="32.0" layoutY="698.0" mnemonicParsing="false" text="Rapport Mensuel " textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Separator layoutX="10.0" layoutY="803.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                  <Text fill="WHITE" layoutX="36.0" layoutY="794.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONSULTER LES PROFILES " wrappingWidth="183.93600463867188">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView layoutX="7.0" layoutY="774.0">
+                     <image>
+                        <Image url="@figma/vuesax/linear/profile-2user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="9.0" layoutY="819.0">
+                     <image>
+                        <Image url="@figma/vuesax/linear/tag-user.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="37.0" layoutY="823.0" mnemonicParsing="false" text="Profiles Employee" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fitHeight="90.0" fitWidth="200.0" layoutX="13.0" layoutY="151.0" smooth="false">
+                     <image>
+                        <Image url="@voiture/Tesla-Car-PNG-Isolated-Picture.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="18.0" layoutY="412.0">
+                     <image>
+                        <Image url="@figma/Icon=Subnavigation.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="13.0" layoutY="371.0">
+                     <image>
+                        <Image url="@figma/Icon=Subnavigation.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="38.0" layoutY="407.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="174.0" text="Création de profils" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+      <Text fill="WHITE" layoutX="1653.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M. STEVE Trabajo" wrappingWidth="159.380859375">
+         <font>
+            <Font name="Hiragino Sans W3" size="19.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="924.0" fitWidth="269.0" layoutX="1588.0" layoutY="25.0">
+         <image>
+            <Image url="@figma/Rectangle%20110.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="173.0" fitWidth="167.0" layoutX="1649.0" layoutY="71.0">
+         <image>
+            <Image url="@figma/219986.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="1600.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DIRETION  RESSOURCE HUMAINE" wrappingWidth="265.5361328125">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#ddcece" layoutX="1665.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYÉ DE CYBER CAR " />
+      <ImageView fitHeight="183.0" fitWidth="176.0" layoutX="1645.0" layoutY="66.0">
+         <image>
+            <Image url="@figma/profile%20image.png" />
+         </image>
+      </ImageView>
+      <Text fill="#ddcece" layoutX="1676.0" layoutY="841.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dernierre Connexion " wrappingWidth="114.58203125" />
+      <Text fill="#ddcece" layoutX="1683.0" layoutY="893.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10:00 | 20/03/2022" />
+      <Pane layoutY="1.0">
+         <children>
+            <Text fill="#fff6f6" layoutX="724.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consultation de profil">
+               <font>
+                  <Font name="Beirut Regular" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="122.0" fitWidth="307.0" layoutX="796.0" layoutY="141.0">
+               <image>
+                  <Image url="@figma/square.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="810.0" layoutY="155.0">
+               <image>
+                  <Image url="@figma/people_alt.png" />
+               </image>
+            </ImageView>
+            <Text fill="#fff6f6" layoutX="863.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE D'EMPLOYEES">
+               <font>
+                  <Font name="Beirut Regular" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#fff6f6" layoutX="949.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+               <font>
+                  <Font name="Avenir Book" size="16.0" />
+               </font>
+            </Text>
+            <ImageView layoutX="814.0" layoutY="906.0" preserveRatio="true">
+               <image>
+                  <Image url="@figma/Standard%20Collection%203.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="758.0" layoutY="70.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.26" prefHeight="12.0" prefWidth="104.0" />
+            <ImageView fitHeight="122.0" fitWidth="307.0" layoutX="349.0" layoutY="141.0">
+               <image>
+                  <Image url="@figma/square.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="338.0" layoutY="153.0">
+               <image>
+                  <Image url="@figma/people_alt.png" />
+               </image>
+            </ImageView>
+            <Text fill="#fff6f6" layoutX="399.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE D'EMPLOYEES">
+               <font>
+                  <Font name="Beirut Regular" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#fff6f6" layoutX="485.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+               <font>
+                  <Font name="Avenir Book" size="16.0" />
+               </font>
+            </Text>
+            <ListView layoutX="1198.0" layoutY="396.0" opacity="0.49" prefHeight="441.0" prefWidth="377.0" />
+            <GenericEditableTableCell layoutX="510.0" layoutY="570.0" prefHeight="21.0" prefWidth="303.0" />
+            <TableView layoutX="279.0" layoutY="395.0" opacity="0.2" prefHeight="441.0" prefWidth="898.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="ID" />
+                <TableColumn prefWidth="75.0" text="Nom" />
+                  <TableColumn prefWidth="75.0" text="Prénom" />
+                  <TableColumn prefWidth="75.0" text="Email" />
+                  <TableColumn prefWidth="75.0" text="Téléphone" />
+                  <TableColumn prefWidth="75.0" text="Fonction" />
+                  <TableColumn prefWidth="109.0" text="Departement" />
+                  <TableColumn prefWidth="131.0" text="Début du contrat" />
+                  <TableColumn prefWidth="100.0" text="Fin du contrat " />
+              </columns>
+            </TableView>
+            <Text layoutX="1273.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMATION">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Text>
+            <Text layoutX="1243.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1243.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1243.0" layoutY="576.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1243.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date de naissance">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1244.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fonction">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1243.0" layoutY="664.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assurance">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1243.0" layoutY="698.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abscence">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1244.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Congé restant (jours)">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1247.0" layoutY="807.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salaire">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="1241.0" layoutY="767.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Congé restant (jours)">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</Pane>
