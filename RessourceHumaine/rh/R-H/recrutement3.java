@@ -1,5 +1,3 @@
-package RessourceHumaine.rh;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -19,12 +17,11 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import jfxtras.scene.control.LocalDateTimeTextField;
 
-/*import javafx.scene.control.Button;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Spinner;
-import javafx.scene.text.Text;*/
 
 public class recrutement3 extends Application  implements Initializable  {
 
@@ -136,7 +133,7 @@ public class recrutement3 extends Application  implements Initializable  {
     @FXML
     void RecupDonneRecrutement(ActionEvent event) {
     	try {
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("R-H/R-H/Recrutement3.fxml"));
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("File_FXML/R-H/Recrutement3.fxml"));
     	Parent root = (Parent) loader.load();
     	recrutement3 controller =loader.getController();
     	Scene scene = new Scene(root);
@@ -157,18 +154,18 @@ public class recrutement3 extends Application  implements Initializable  {
   @Override public void start(Stage recrutement) throws Exception {
   
   Parent recrutement3 =
-  FXMLLoader.load(getClass().getResource("R-H/R-H/Recrutement3.fxml")); Scene
+  FXMLLoader.load(getClass().getResource("File_FXML/R-H/Recrutement3.fxml")); Scene
   scene1 =new Scene(recrutement3); recrutement.setScene(scene1);
   recrutement.show();
   
   }
   
-  public static void main(String args[]) //static method { launch(args);
+  public static void main(String args[]) {//static method { launch(args);
   
   }
   
-  @Override public void initialize(URL arg0, ResourceBundle arg1) { // TODO
-  Auto-generated method stub
+  @Override public void initialize(URL arg0, ResourceBundle arg1) {
   
   }
+}
  

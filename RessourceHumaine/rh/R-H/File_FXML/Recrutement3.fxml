@@ -27,14 +27,14 @@
          <children>
             <ImageView fitHeight="1080.0" fitWidth="1922.0" opacity="0.25">
                <image>
-                  <Image url="@figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash(1).jpg" />
+                  <Image url="@../figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash(1).jpg" />
                </image>
             </ImageView>
             <BorderPane prefHeight="1058.0" prefWidth="1590.0">
                <top>
                   <ImageView BorderPane.alignment="CENTER">
                      <image>
-                        <Image url="@figma/Logo.png" />
+                        <Image url="@../figma/Logo.png" />
                      </image>
                      <BorderPane.margin>
                         <Insets bottom="3.0" left="30.0" />
@@ -54,7 +54,7 @@
                               <Separator layoutX="11.0" layoutY="349.0" prefWidth="200.0" style="-fx-border-color: white;" />
                               <ImageView layoutX="12.0" layoutY="313.0">
                                  <image>
-                                    <Image url="@figma/icon/24/protocols.png" />
+                                    <Image url="@../figma/icon/24/protocols.png" />
                                  </image>
                               </ImageView>
                               <Text fill="WHITE" layoutX="43.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES PROFILS" wrappingWidth="140.26123046875">
@@ -72,7 +72,7 @@
                               </Button>
                               <ImageView layoutX="102.0" layoutY="71.0">
                                  <image>
-                                    <Image url="@figma/menu/Vector.png" />
+                                    <Image url="@../figma/menu/Vector.png" />
                                  </image>
                               </ImageView>
                               <Separator layoutX="10.0" layoutY="507.0" prefWidth="200.0" style="-fx-border-color: white;" />
@@ -83,12 +83,12 @@
                               </Text>
                               <ImageView layoutX="7.0" layoutY="478.0">
                                  <image>
-                                    <Image url="@figma/vuesax/linear/profile-2user.png" />
+                                    <Image url="@../figma/vuesax/linear/profile-2user.png" />
                                  </image>
                               </ImageView>
                               <ImageView layoutX="9.0" layoutY="523.0">
                                  <image>
-                                    <Image url="@figma/vuesax/linear/tag-user.png" />
+                                    <Image url="@../figma/vuesax/linear/tag-user.png" />
                                  </image>
                               </ImageView>
                               <Button layoutX="37.0" layoutY="527.0" mnemonicParsing="false" text="Profiles Employee" textFill="WHITE">
@@ -101,17 +101,17 @@
                               </Button>
                               <ImageView fitHeight="90.0" fitWidth="200.0" layoutX="13.0" layoutY="151.0" smooth="false">
                                  <image>
-                                    <Image url="@voiture/Tesla-Car-PNG-Isolated-Picture.png" />
+                                    <Image url="@../Figma_IMG_voiture/Tesla-Car-PNG-Isolated-Picture.png" />
                                  </image>
                               </ImageView>
                               <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="18.0" layoutY="412.0">
                                  <image>
-                                    <Image url="@figma/Icon=Subnavigation.png" />
+                                    <Image url="@../figma/Icon=Subnavigation.png" />
                                  </image>
                               </ImageView>
                               <ImageView layoutX="13.0" layoutY="371.0">
                                  <image>
-                                    <Image url="@figma/Icon=Subnavigation.png" />
+                                    <Image url="@../figma/Icon=Subnavigation.png" />
                                  </image>
                               </ImageView>
                               <Button layoutX="38.0" layoutY="407.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="174.0" text="Création de profils" textFill="WHITE">
@@ -140,7 +140,7 @@
             </ImageView>
             <ImageView fitHeight="173.0" fitWidth="167.0" layoutX="1649.0" layoutY="71.0">
                <image>
-                  <Image url="@figma/219986.png" />
+                  <Image url="@../figma/219986.png" />
                </image>
             </ImageView>
             <Text fill="WHITE" layoutX="1600.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DIRETION  RESSOURCE HUMAINE" wrappingWidth="265.5361328125">
@@ -160,7 +160,7 @@
                <children>
                   <ImageView fitHeight="901.0" fitWidth="983.0" layoutX="247.0" layoutY="26.0">
                      <image>
-                        <Image url="@figma/square.png" />
+                        <Image url="@../figma/square.png" />
                      </image>
                   </ImageView>
                   <Text fill="#fff6f6" layoutX="631.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campagne de Recrutement">
@@ -247,12 +247,12 @@
                   </RadioButton>
                   <ImageView fitHeight="141.0" fitWidth="307.0" layoutX="1243.0" layoutY="27.0">
                      <image>
-                        <Image url="@figma/square.png" />
+                        <Image url="@../figma/square.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="1254.0" layoutY="37.0">
                      <image>
-                        <Image url="@figma/people_alt.png" />
+                        <Image url="@../figma/people_alt.png" />
                      </image>
                   </ImageView>
                   <Text fill="#fff6f6" layoutX="1315.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE D'EMPLOYEES">
@@ -347,12 +347,12 @@
                   <AutoCompleteTextField layoutX="918.0" layoutY="518.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #ffffff;" text="Déscriptif ..." />
                   <ImageView fitHeight="409.0" fitWidth="307.0" layoutX="1243.0" layoutY="228.0">
                      <image>
-                        <Image url="@figma/square.png" />
+                        <Image url="@../figma/square.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="1254.0" layoutY="238.0">
                      <image>
-                        <Image url="@figma/people_alt.png" />
+                        <Image url="@../figma/people_alt.png" />
                      </image>
                   </ImageView>
                   <Text fill="#fff6f6" layoutX="1308.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÉATION DE COMPTE UTILISATEUR" textAlignment="CENTER" wrappingWidth="186.587890625">

@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../../../../../Program Files (x86)/Java/javafx-sdk-18.0.1/lib" />
+      <root url="jar://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/jfxtras-controls-0.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/charm-glisten-6.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/jfxtras-labs-2.2-r5.jar/jfxtras-labs-2.2-r5.jar!/" />
+      <root url="file://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar" />
+      <root url="file://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar" />
+      <root url="jar://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/JFoenix-master/jfoenix-8.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/jar_files/jfxtras-common-17-r1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/jar_files/jfxtras-controls-17-r1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/jar_files/jfxtras-fxml-17-r1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/JFoenix-master/JFoenix-master/jfoenix/build/docs/javadoc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/JFoenix-master/JFoenix-master/demo/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/JFoenix-master/JFoenix-master/jfoenix/build/dalvik-sdk/samples/HelloWorld/javafx/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar/JFoenix-master/JFoenix-master/jfoenix/src/main/java" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../../../Program Files (x86)/Java/javafx-sdk-18.0.1/lib" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../Woloz Group/Projet/CyberCar/projet Fxml/projet Fxml/R-H/R-H/Jar" recursive="false" />
+  </library>
+</component>
