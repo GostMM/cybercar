@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="module.rh.Recrutement">
+   <content>
+      <TabPane>
+         <tabs>
+            <Tab text="Tableau De Bord">
+               <content>
+                  <Pane prefHeight="1038.0" prefWidth="1902.0" style="-fx-background-color: linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036)linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036);">
+                     <children>
+                        <ImageView fitHeight="1080.0" fitWidth="1922.0" opacity="0.25">
+                           <image>
+                              <Image url="@figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <BorderPane prefHeight="1058.0" prefWidth="1904.0">
+                           <top>
+                              <ImageView BorderPane.alignment="CENTER">
+                                 <image>
+                                    <Image url="@figma/Logo.png" />
+                                 </image>
+                                 <BorderPane.margin>
+                                    <Insets bottom="3.0" left="30.0" />
+                                 </BorderPane.margin>
+                              </ImageView>
+                           </top>
+                           <left>
+                              <Pane styleClass="paneBoard" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane prefHeight="0.0" prefWidth="247.0" style="-fx-background-color: rgba(0,0,0,0.75)rgba(0,0,0,0.75);">
+                                       <children>
+                                          <Text fill="WHITE" fontSmoothingType="LCD" layoutX="50.0" layoutY="122.0" stroke="#861313" strokeLineCap="ROUND" strokeWidth="0.0" text="TABLEAU DE BORD">
+                                             <font>
+                                                <Font name="Lato Heavy" size="15.0" />
+                                             </font>
+                                          </Text>
+                                          <Separator layoutX="11.0" layoutY="349.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                                          <ImageView layoutX="12.0" layoutY="313.0">
+                                             <image>
+                                                <Image url="@figma/icon/24/protocols.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fill="WHITE" layoutX="43.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES PROFILS" wrappingWidth="140.26123046875">
+                                             <font>
+                                                <Font name="Lato Heavy" size="13.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView layoutX="102.0" layoutY="71.0">
+                                             <image>
+                                                <Image url="@figma/menu/Vector.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Separator layoutX="10.0" layoutY="507.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                                          <Text fill="WHITE" layoutX="36.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONSULTER LES PROFILES " wrappingWidth="183.93600463867188">
+                                             <font>
+                                                <Font name="Lato Heavy" size="13.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView layoutX="7.0" layoutY="478.0">
+                                             <image>
+                                                <Image url="@figma/vuesax/linear/profile-2user.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button layoutX="37.0" layoutY="532.0" mnemonicParsing="false" styleClass="btn" text="Profiles Employee" textFill="WHITE">
+                                             <font>
+                                                <Font name="Lato Heavy" size="13.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <ImageView fitHeight="90.0" fitWidth="200.0" layoutX="13.0" layoutY="151.0" smooth="false">
+                                             <image>
+                                                <Image url="@voiture/Tesla-Car-PNG-Isolated-Picture.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView layoutX="13.0" layoutY="371.0">
+                                             <image>
+                                                <Image url="@figma/Icon=Subnavigation.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <ImageView layoutX="14.0" layoutY="401.0">
+                                       <image>
+                                          <Image url="@figma/Icon=Subnavigation.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="26.0" layoutY="368.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="106.0" styleClass="btn" text="Recrutement" textFill="WHITE">
+                                       <font>
+                                          <Font name="Lato Heavy" size="13.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button layoutX="22.0" layoutY="398.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="144.0" styleClass="btn" text="Création de profils" textFill="WHITE">
+                                       <font>
+                                          <Font name="Lato Heavy" size="13.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <ImageView layoutX="14.0" layoutY="530.0">
+                                       <image>
+                                          <Image url="@figma/vuesax/linear/tag-user.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </left>
+                           <center>
+                              <Pane prefHeight="927.0" prefWidth="1412.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="901.0" fitWidth="983.0" layoutX="14.0" layoutY="29.0">
+                                       <image>
+                                          <Image url="@figma/square.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#fff6f6" layoutX="393.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campagne de Recrutement">
+                                       <font>
+                                          <Font name="Beirut Regular" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="96.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom *">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="119.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="285.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="119.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="exemple@example.com">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="96.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse Mail *">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="101.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Téléphone *">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="indicatif" accessibleRole="TEXT_AREA" layoutX="119.0" layoutY="521.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #ffffff;" text="+230" />
+                                    <Text fill="#fff6f6" layoutX="119.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indicatif">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="218.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Téléphone">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="tel" accessibleRole="TEXT_AREA" layoutX="216.0" layoutY="520.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="58 88 07 29" />
+                                    <AutoCompleteTextField fx:id="email" layoutX="119.0" layoutY="414.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="241.0" style="-fx-background-color: #ffffff;" text="Mail Address" />
+                                    <AutoCompleteTextField fx:id="name" layoutX="119.0" layoutY="242.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #ffffff;" text="Last Name" />
+                                    <AutoCompleteTextField fx:id="lastname" layoutX="285.0" layoutY="242.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #ffffff;" text="Name" />
+                                    <Text fill="#fff6f6" layoutX="101.0" layoutY="609.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profession *">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <AutoCompleteTextField fx:id="oldJob" layoutX="119.0" layoutY="631.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="241.0" style="-fx-background-color: #ffffff;" text="Old Job" />
+                                    <Text fill="#fff6f6" layoutX="119.0" layoutY="683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ancien poste">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <AutoCompleteTextField fx:id="newJob" layoutX="119.0" layoutY="704.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="241.0" style="-fx-background-color: #ffffff;" text="New job" />
+                                    <Text fill="#fff6f6" layoutX="119.0" layoutY="756.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poste visé">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="86.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Civilité *">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <RadioButton fx:id="Monsieur" layoutX="159.0" layoutY="170.0" mnemonicParsing="false" onAction="#BntMrSelected" text="Monsieur" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Madame" layoutX="327.0" layoutY="169.0" mnemonicParsing="false" onAction="#BtnMmeSelected" text="Madame" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <ImageView fitHeight="141.0" fitWidth="307.0" layoutX="1005.0" layoutY="30.0">
+                                       <image>
+                                          <Image url="@figma/square.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="1016.0" layoutY="40.0">
+                                       <image>
+                                          <Image url="@figma/people_alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#fff6f6" layoutX="1077.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE D'EMPLOYEES">
+                                       <font>
+                                          <Font name="Beirut Regular" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="nombreEmployes" fill="#fff6f6" layoutX="1163.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Separator layoutX="493.0" layoutY="113.0" orientation="VERTICAL" prefHeight="783.0" prefWidth="2.0" style="-fx-background-color: #C0C0C0;" />
+                                    <Text fill="#fff6f6" layoutX="529.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Situation congugale *">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="555.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Autres">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <RadioButton fx:id="mariee" layoutX="638.0" layoutY="169.0" mnemonicParsing="false" text="Marié(e)" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="celibataire" layoutX="806.0" layoutY="169.0" mnemonicParsing="false" text="Célibataire" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <AutoCompleteTextField fx:id="otherSituation" layoutX="554.0" layoutY="233.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="171.0" style="-fx-background-color: #ffffff;" text="Other" />
+                                    <Spinner fx:id="nombreEnfant" layoutX="805.0" layoutY="270.0" style="-fx-background-color: white;" />
+                                    <Text fill="#fff6f6" layoutX="551.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombres d'enfants en charges">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="536.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Situation Médicale *">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="553.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Traitement médicale suivi ?">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <RadioButton fx:id="yesMedical" layoutX="558.0" layoutY="372.0" mnemonicParsing="false" onAction="#SuiviMedicalOui" text="Oui" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="noMedical" layoutX="726.0" layoutY="372.0" mnemonicParsing="false" onAction="#SuiviMedicalNon" text="Non" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <Text fill="#fff6f6" layoutX="554.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si Oui, lequel ?">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <AutoCompleteTextField fx:id="otherMedical" floatText="Déscriptif ..." layoutX="678.0" layoutY="408.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="222.0" />
+                                    <Text fill="#fff6f6" layoutX="553.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avez une allérgie ?">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <RadioButton fx:id="yesAllergie" layoutX="558.0" layoutY="485.0" mnemonicParsing="false" text="Oui" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="noAllergie" layoutX="726.0" layoutY="484.0" mnemonicParsing="false" text="Non" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <Text fill="#fff6f6" layoutX="554.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si Oui, laquelle ?">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <AutoCompleteTextField layoutX="680.0" layoutY="521.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #ffffff;" text="Déscriptif ..." />
+                                    <ImageView fitHeight="409.0" fitWidth="307.0" layoutX="1005.0" layoutY="231.0">
+                                       <image>
+                                          <Image url="@figma/square.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="1016.0" layoutY="241.0">
+                                       <image>
+                                          <Image url="@figma/people_alt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#fff6f6" layoutX="1070.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRÉATION DE COMPTE UTILISATEUR" textAlignment="CENTER" wrappingWidth="186.587890625">
+                                       <font>
+                                          <Font name="Beirut Regular" size="18.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" layoutX="1047.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Département " textAlignment="CENTER" wrappingWidth="109.587890625">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="1049.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrepôts" textAlignment="CENTER" wrappingWidth="77.587890625">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="submitDmUserCompte" layoutX="1123.0" layoutY="548.0" mnemonicParsing="false" styleClass="button1" text="Valider" textFill="#5ff5b7">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <MenuButton fx:id="service" layoutX="1172.0" layoutY="314.0" mnemonicParsing="false" styleClass="button1" text="Service">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Admin" />
+                                          <MenuItem mnemonicParsing="false" text="Marketing / Vente" />
+                                          <MenuItem mnemonicParsing="false" text="Ressources Humaines" />
+                                       </items>
+                                    </MenuButton>
+                                    <MenuButton fx:id="entrepots" layoutX="1174.0" layoutY="366.0" mnemonicParsing="false" styleClass="button1" text="Where">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Port Louis" />
+                                          <MenuItem mnemonicParsing="false" text="Baie de Tombeau" />
+                                          <MenuItem mnemonicParsing="false" text="Phoenix" />
+                                          <MenuItem mnemonicParsing="false" text="Plaisance" />
+                                       </items>
+                                    </MenuButton>
+                                    <Text fill="#fff6f6" layoutX="1083.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'embauche" textAlignment="CENTER" wrappingWidth="132.587890625">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <DatePicker fx:id="embaucheDate" layoutX="1062.0" layoutY="456.0" />
+                                    <Text fill="#fff6f6" layoutX="558.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avez-vous une assurance maladie?">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <RadioButton fx:id="yesAssurance" layoutX="561.0" layoutY="591.0" mnemonicParsing="false" text="Oui" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="noAssurance" layoutX="729.0" layoutY="590.0" mnemonicParsing="false" text="Non" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <Text fill="#fff6f6" layoutX="558.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si Oui, quelle est votre numéro de sécurité sociale ?">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <AutoCompleteTextField fx:id="numeroSocial" layoutX="559.0" layoutY="658.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #ffffff;" text="Déscriptif ..." />
+                                    <Text fill="#fff6f6" layoutX="544.0" layoutY="712.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salaire *" wrappingWidth="68.0">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="558.0" layoutY="741.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Éstimation salariale (€)">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Spinner fx:id="salaire" layoutX="723.0" layoutY="725.0" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: white;" />
+                                    <Text fill="#fff6f6" layoutX="96.0" layoutY="786.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prise de rendez-vous *">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="119.0" layoutY="820.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entretien">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="543.0" layoutY="776.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation" wrappingWidth="107.0">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#fff6f6" layoutX="557.0" layoutY="810.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmer l'intégration">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <RadioButton fx:id="yesIntegre" layoutX="740.0" layoutY="793.0" mnemonicParsing="false" text="Oui" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="noIntegre" layoutX="836.0" layoutY="792.0" mnemonicParsing="false" text="Non" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <Button fx:id="submitIntegre" layoutX="672.0" layoutY="867.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="147.0" styleClass="button1" text="Valider">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Text fill="#fff6f6" layoutX="119.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de jeune fille">
+                                       <font>
+                                          <Font name="Avenir Book" size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <AutoCompleteTextField fx:id="nameGirl" layoutX="119.0" layoutY="307.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #ffffff;" text="Last Name" />
+                                    <Button fx:id="submitRdv" layoutX="189.0" layoutY="867.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="147.0" styleClass="button1" text="Valider">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </center>
+                           <right>
+                              <Pane prefHeight="922.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fitHeight="924.0" fitWidth="246.0">
+                                       <image>
+                                          <Image url="@figma/Rectangle%20110.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="102.0" fitWidth="105.0" layoutX="63.0" layoutY="101.0">
+                                       <image>
+                                          <Image url="@figma/219986.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="WHITE" layoutX="10.0" layoutY="303.498046875" strokeType="OUTSIDE" strokeWidth="0.0" text="DIRETION  RESSOURCE HUMAINE" wrappingWidth="265.5361328125">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#ddcece" layoutX="49.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYÉ DE CYBER CAR " />
+                                    <ImageView fitHeight="103.0" fitWidth="106.0" layoutX="62.0" layoutY="101.0">
+                                       <image>
+                                          <Image url="@figma/profile%20image.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#ddcece" layoutX="75.0" layoutY="808.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dernierre Connexion " wrappingWidth="114.58203125" />
+                                    <Text fx:id="lastConnexion" fill="#ddcece" layoutX="82.0" layoutY="860.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10:00 | 20/03/2022" />
+                                    <Text fx:id="userName" fill="WHITE" layoutX="30.0" layoutY="253.27999877929688" strokeType="OUTSIDE" strokeWidth="0.0" text="M. STEVE Trabajo" wrappingWidth="203.380859375">
+                                       <font>
+                                          <Font name="Hiragino Sans W3" size="19.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </right>
+                           <bottom>
+                              <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="71.0" prefWidth="1904.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Pane layoutX="830.0" layoutY="8.0" prefHeight="40.0" prefWidth="198.0">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="14.0" layoutY="1.0" preserveRatio="true">
+                                             <image>
+                                                <Image url="@figma/Standard%20Collection%203.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Text fill="#fff6f6" layoutX="56.0" layoutY="25.59765625" strokeType="OUTSIDE" strokeWidth="0.0" text="Cybercar by Woloz">
+                                             <font>
+                                                <Font name="System Bold Italic" size="18.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </bottom>
+                        </BorderPane>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </content>
+</ScrollPane>

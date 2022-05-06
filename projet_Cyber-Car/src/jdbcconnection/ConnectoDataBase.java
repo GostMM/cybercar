@@ -1,20 +1,15 @@
 package jdbcconnection;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.Properties;
-import java.util.Random;
 
 
+/**
+ * @author Mroivili Moustoifa 
+ * La ConnectoDataBase permet de se connecter à la base de donnée en renseignant les identifiant et mot de passe
+ *
+ */
 public class ConnectoDataBase
 {
 

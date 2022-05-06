@@ -1,0 +1,85 @@
+.paneRadius
+{
+    -fx-background-color : rgb(76, 168, 214);
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+}
+
+
+.button1
+{
+ -fx-background-color : rgba(250, 229, 229, 0.3);
+ -fx-text-fill:white;
+ -fx-cursor: hand;
+ 
+
+}
+
+.button1:pressed
+{
+    -fx-background-color : rgba(71, 71, 185, 0.364);
+
+}
+
+.active
+{
+    -fx-background-color:blue ;
+  }
+
+.paneBoard{
+    -fx-background-color:linear-gradient(to right,rgba(76, 18, 163, 0.549),rgba(0, 0, 0, 0.551),black);
+
+    
+    -fx-background-radius : 0px 20px 20px 0px;
+}
+
+.reponse
+{
+     -fx-background-color : rgba(1, 66, 79, 0.288);
+     -fx-text-fill :white;
+     -fx-padding : 50 50 50 50  ;
+    
+     -fx-background-radius: 50px 50px 0px 0px ;
+     -fx-focus-color:violet;
+
+}
+
+.saisi
+{
+    -fx-background-radius: 50px 50px 50px 50px ;
+}
+
+.btn
+{
+    -fx-background-color:none;
+}
+.btn:hover
+{
+ 
+     -fx-background-color :rgb(8, 145, 230);
+     -fx-background-radius: 10px 10px 5px 5px ;
+     -fx-transform:all 90s ease-in-out
+
+}
+.btn:pressed
+{
+   
+    -fx-background-color: rgba(71, 71, 185, 0.364);
+
+}
+
+
+.tab
+{
+ -fx-background-color :rgba(210, 255, 239, 0.551);
+ -fx-background-radius: 10 10 0 0;
+ 
+ 
+
+}
+
+.tab:pressed
+{
+    -fx-background-color : white !important;
+    -fx-text-fill : black !important
+}

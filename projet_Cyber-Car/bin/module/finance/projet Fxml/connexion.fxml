@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="module.main.connectController">
+   <left>
+      <Pane prefHeight="608.0" prefWidth="955.0">
+         <children>
+            <Pane layoutY="2.0" prefHeight="608.0" prefWidth="561.0">
+               <children>
+                  <ImageView fitHeight="608.0" fitWidth="560.0" layoutY="-2.0">
+                     <image>
+                        <Image url="@figma/Left%20Content.png" />
+                     </image>
+                  </ImageView>
+                  <Text fontSmoothingType="LCD" layoutX="644.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonjour ">
+                     <font>
+                        <Font name="Poppins Regular" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="644.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenu">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="731.0" layoutY="546.0">
+                     <image>
+                        <Image url="@figma/Standard%20Collection%203.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="768.0" layoutY="567.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WOLOZ GROUP BY cryptosoft">
+                     <font>
+                        <Font name="Arial Unicode MS" size="10.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="login" floatText="adresse Email" layoutX="656.0" layoutY="238.0" onDragDetected="#loginValue" prefHeight="36.0" prefWidth="160.0" styleClass="saisi" stylesheets="@css/style.css" />
+                  <TextField fx:id="mdp" floatText="mot de passe" layoutX="656.0" layoutY="275.0" onDragDetected="#mdpValue" prefHeight="31.0" prefWidth="160.0" styleClass="saisi" stylesheets="@css/style.css" />
+                  <ImageView fitHeight="24.0" fitWidth="21.0" layoutX="611.0" layoutY="249.0">
+                     <image>
+                        <Image url="@figma/codicon_mail.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="609.0" layoutY="283.0">
+                     <image>
+                        <Image url="@figma/bx_bxs-lock-alt.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="connect" layoutX="696.0" layoutY="334.0" onAction="#OnConnect" ripplerFill="#ab1c1c" style="-fx-border-color: black;" text="Connexion " viewOrder="2.0" />
+                  <ImageView fitHeight="118.0" fitWidth="126.0" layoutX="686.0" layoutY="412.0">
+                     <image>
+                        <Image url="@voiture/Car-Wheel-PNG-File.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </left>
+</BorderPane>

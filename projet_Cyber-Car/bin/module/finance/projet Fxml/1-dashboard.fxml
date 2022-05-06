@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TabPane style="-fx-background-color: linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036)linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036) linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036)linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036);">
+               <tabs>
+                  <Tab style="-fx-background-color: white;" text="Acceuil">
+                     <content>
+                        <Pane prefHeight="995.0">
+                           <children>
+                              <ImageView opacity="0.29">
+                                 <image>
+                                    <Image url="@figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane>
+                                 <children>
+                                    <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <BorderPane prefHeight="1026.0" prefWidth="1920.0">
+                                             <top>
+                                                <ImageView BorderPane.alignment="CENTER">
+                                                   <image>
+                                                      <Image url="@figma/Logo.png" />
+                                                   </image>
+                                                   <BorderPane.margin>
+                                                      <Insets bottom="3.0" left="30.0" />
+                                                   </BorderPane.margin>
+                                                </ImageView>
+                                             </top>
+                                             <left>
+                                                <Pane prefHeight="991.0" prefWidth="244.0" styleClass="paneBoard" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Text fill="WHITE" fontSmoothingType="LCD" layoutX="35.0" layoutY="121.0" stroke="#861313" strokeLineCap="ROUND" strokeWidth="0.0" text="TABLEAU DE BORD">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="15.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Separator layoutX="11.0" layoutY="349.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                                                      <ImageView layoutX="12.0" layoutY="313.0">
+                                                         <image>
+                                                            <Image url="@figma/icon/24/protocols.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text fill="WHITE" layoutX="39.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES STOCK">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Button fx:id="suivi" layoutX="36.0" layoutY="368.0" mnemonicParsing="false" onAction="#onSuivi" style="-fx-background-color: none;" text="Suivie Commande" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="13.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <Button fx:id="commande" layoutX="32.0" layoutY="400.0" mnemonicParsing="false" onAction="#onCommande" prefHeight="16.0" prefWidth="175.0" style="-fx-background-color: NONE;" text="Commander Nouvelle Voiture" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="13.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <Separator layoutX="11.0" layoutY="506.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                                                      <Text fill="WHITE" layoutX="41.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONSULTER RAPPORT DE VENTE " wrappingWidth="165.93600463867188">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <ImageView layoutX="12.0" layoutY="364.0">
+                                                         <image>
+                                                            <Image url="@figma/Icon=Subnavigation.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView layoutX="12.0" layoutY="400.0">
+                                                         <image>
+                                                            <Image url="@figma/Icon=Subnavigation.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView layoutX="9.0" layoutY="471.0">
+                                                         <image>
+                                                            <Image url="@figma/icon/24/donate.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView layoutX="102.0" layoutY="71.0">
+                                                         <image>
+                                                            <Image url="@figma/menu/Vector.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView layoutX="12.0" layoutY="547.0">
+                                                         <image>
+                                                            <Image url="@figma/Icon=Subnavigation.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Button fx:id="rapport" layoutX="35.0" layoutY="547.0" mnemonicParsing="false" onAction="#onRapport" style="-fx-background-color: NONE;" text="Rapport" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="13.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <Separator layoutX="13.0" layoutY="634.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                                                      <Text fill="WHITE" layoutX="40.0" layoutY="624.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPARTEMENT" wrappingWidth="183.93600463867188">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="13.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Button fx:id="rh" layoutX="49.0" layoutY="654.0" mnemonicParsing="false" onAction="#onRh" style="-fx-background-color: NONE;" text="RH" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="13.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <Button fx:id="Vm" layoutX="40.0" layoutY="683.0" mnemonicParsing="false" onAction="#onVm" style="-fx-background-color: NONE;" text="VENTE ET MARKETING" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="Lato Heavy" size="13.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <ImageView layoutX="19.0" layoutY="680.0">
+                                                         <image>
+                                                            <Image url="@figma/bar_chart.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView layoutX="23.0" layoutY="654.0">
+                                                         <image>
+                                                            <Image url="@figma/people_alt.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="115.0" fitWidth="122.0" layoutX="50.0" layoutY="157.0">
+                                                         <image>
+                                                            <Image url="@voiture/Car-Wheel-PNG-File.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView layoutX="13.0" layoutY="602.0">
+                                                         <image>
+                                                            <Image url="@figma/apartment.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </Pane>
+                                             </left>
+                                             <center>
+                                                <Pane prefHeight="991.0" prefWidth="1644.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <ImageView fitHeight="413.0" fitWidth="620.0" layoutX="72.0" layoutY="529.0">
+                                                         <image>
+                                                            <Image url="@figma/Portfolios%20Performance.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="141.0" fitWidth="376.0" layoutX="773.0" layoutY="161.0">
+                                                         <image>
+                                                            <Image url="@figma/square.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="29.0" fitWidth="41.0" layoutX="777.0" layoutY="161.0">
+                                                         <image>
+                                                            <Image url="@figma/Method=Yandex.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="141.0" fitWidth="376.0" layoutX="773.0" layoutY="348.0">
+                                                         <image>
+                                                            <Image url="@figma/square.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="141.0" fitWidth="376.0" layoutX="773.0" layoutY="555.0">
+                                                         <image>
+                                                            <Image url="@figma/square.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="141.0" fitWidth="376.0" layoutX="773.0" layoutY="771.0">
+                                                         <image>
+                                                            <Image url="@figma/square.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text fill="#fff6f6" layoutX="878.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREDIT DISPONIBLE">
+                                                         <font>
+                                                            <Font name="Beirut Regular" size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text fx:id="credit" fill="#fff6f6" layoutX="942.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 €">
+                                                         <font>
+                                                            <Font name="Avenir Book" size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text fill="#fff6f6" layoutX="803.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE DE COMMANDE  EN COURS">
+                                                         <font>
+                                                            <Font name="Beirut Regular" size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text fx:id="commendeEncours" fill="#fff6f6" layoutX="952.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19">
+                                                         <font>
+                                                            <Font name="Avenir Book" size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text fill="#fff6f6" layoutX="875.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE D'EMPLOYEES">
+                                                         <font>
+                                                            <Font name="Beirut Regular" size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text fx:id="nbEmployee" fill="#fff6f6" layoutX="952.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                                                         <font>
+                                                            <Font name="Avenir Book" size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text fill="#fff6f6" layoutX="854.0" layoutY="796.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre De Voiture Restant">
+                                                         <font>
+                                                            <Font name="Beirut Regular" size="18.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <Text fx:id="stock" fill="#fff6f6" layoutX="944.0" layoutY="847.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12 ">
+                                                         <font>
+                                                            <Font name="Avenir Book" size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="778.0" layoutY="562.0">
+                                                         <image>
+                                                            <Image url="@figma/people_alt.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="423.0" fitWidth="633.0" layoutX="66.0" layoutY="91.0">
+                                                         <image>
+                                                            <Image url="@figma/car_dis.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <StackedBarChart fx:id="diagram" layoutX="87.0" layoutY="666.0" prefHeight="260.0" prefWidth="587.0">
+                                                        <xAxis>
+                                                          <CategoryAxis side="BOTTOM" />
+                                                        </xAxis>
+                                                        <yAxis>
+                                                          <NumberAxis side="LEFT" />
+                                                        </yAxis>
+                                                      </StackedBarChart>
+                                                      <Text fx:id="totalVente" fill="WHITE" layoutX="171.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000" />
+                                                      <Text fx:id="chiffreAffaire" fill="WHITE" layoutX="594.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000" />
+                                                      <Text fill="WHITE" layoutX="849.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="content de vous Revoir M. Maurice Beff">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </Pane>
+                                             </center>
+                                             <right>
+                                                <Pane blendMode="SCREEN" cache="true" cacheHint="QUALITY" depthTest="ENABLE" nodeOrientation="LEFT_TO_RIGHT" prefHeight="991.0" prefWidth="495.0" snapToPixel="false" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <Text fill="#ddcece" layoutX="88.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                                                      <Text fx:id="logDate" fill="#ddcece" layoutX="24.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dernierre Connexion  : 20/03/2022" />
+                                                      <ImageView fitHeight="67.0" fitWidth="72.0" layoutX="-40.0" layoutY="-33.0">
+                                                         <image>
+                                                            <Image url="@figma/profile%20image.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="-39.0" layoutY="-35.0">
+                                                         <image>
+                                                            <Image url="@figma/219986.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </Pane>
+                                             </right>
+                                          </BorderPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </Pane>
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@figma/Home-Silhouette-PNG-Clipart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab style="-fx-background-color: white; -fx-margin-left: 10;" text="suivre une commande">
+                     <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="644.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUIVRE UNE COMMANDE" wrappingWidth="467.21630859375">
+                                 <font>
+                                    <Font name="System Bold" size="39.0" />
+                                 </font>
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="0.30092594027519226" blue="0.6504629850387573" opacity="0.8600000143051147" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Text>
+                    
+                              <JFXTextArea fx:id="reponse" focusColor="#02070a" layoutX="564.0" layoutY="593.0" prefHeight="234.0" prefWidth="581.0" styleClass="reponse" stylesheets="@css/style.css" unFocusColor="#ff7e7e">
+                                 <padding>
+                                    <Insets left="12.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </JFXTextArea>
+                              <Text layoutX="741.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOTRE REPONSE S'AFFICHERA ICI ">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="0.5138888955116272" blue="0.5138888955116272" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Text>
+                              <JFXButton fx:id="submit" layoutX="1021.0" layoutY="395.0" onAction="#onSubmit" style="-fx-background-color: blue;" text="suivre" textFill="WHITE" />
+                              <TextField layoutX="707.0" layoutY="395.0" prefHeight="25.0" prefWidth="296.0" />
+                           </children>
+                        </Pane>
+                     </content>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@figma/search.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab text="Commander ">
+                     <content>
+                        <Pane />
+                     </content>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="30.0">
+                           <image>
+                              <Image url="@figma/Method=Qiwi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Tab>
+                  <Tab text="VENTE  &amp; MARKETING">
+                     <graphic>
+                        <ImageView fitWidth="21.0">
+                           <image>
+                              <Image url="@figma/insights.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <BorderPane prefHeight="996.0" prefWidth="1922.0">
+                                       <top>
+                                          <ImageView BorderPane.alignment="CENTER">
+                                             <image>
+                                                <Image url="@figma/Logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </top>
+                                       <left>
+                                          <Pane prefHeight="968.0" prefWidth="326.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Text fill="WHITE" layoutX="38.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPARTEMENT VENTE">
+                                                   <font>
+                                                      <Font size="23.0" />
+                                                   </font>
+                                                </Text>
+                                                <DatePicker layoutX="56.0" layoutY="233.0" />
+                                                <DatePicker layoutX="55.0" layoutY="290.0" />
+                                                <Text fill="WHITE" layoutX="67.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RAPPORT PERODIQUE">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text fill="WHITE" layoutX="19.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DU" />
+                                                <Text fill="WHITE" layoutX="20.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AU" />
+                                             </children>
+                                          </Pane>
+                                       </left>
+                                       <center>
+                                          <Pane prefHeight="376.0" prefWidth="264.0" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Button layoutX="941.0" layoutY="159.0" mnemonicParsing="false" styleClass="button1" stylesheets="@css/style.css" text="SOUMETTRE" />
+                                                <TableView layoutX="30.0" layoutY="220.0" prefHeight="541.0" prefWidth="1001.0">
+                                                  <columns>
+                                                    <TableColumn prefWidth="75.0" text="N°TRANSACTION " />
+                                                    <TableColumn prefWidth="75.0" text="DATE " />
+                                                      <TableColumn prefWidth="75.0" text="MONTANT PAYER  " />
+                                                      <TableColumn prefWidth="75.0" text="REMISE ADDITIONNELLE  " />
+                                                  </columns>
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                </TableView>
+                                                <TextField layoutX="734.0" layoutY="160.0" prefHeight="24.0" prefWidth="200.0" />
+                                                <TextField layoutX="507.0" layoutY="160.0" prefHeight="25.0" prefWidth="199.0" />
+                                                <Text fill="WHITE" layoutX="516.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N° TRANSACTION " />
+                                                <Text fill="WHITE" layoutX="733.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REMISE" />
+                                                <Pane layoutX="1081.0" layoutY="234.0" prefHeight="131.0" prefWidth="217.0" styleClass="paneRadius" stylesheets="@css/style.css">
+                                                   <children>
+                                                      <Text layoutX="52.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE DE VENTE" />
+                                                      <Text layoutX="105.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="1081.0" layoutY="430.0" prefHeight="131.0" prefWidth="217.0" style="-fx-background-color: GRAY;" styleClass="paneRadius">
+                                                   <children>
+                                                      <Text layoutX="55.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CHIFFRE REALISER" />
+                                                      <Text layoutX="105.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </Pane>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="RH">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@figma/groups.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                 
+                                                   </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

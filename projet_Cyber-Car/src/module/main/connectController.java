@@ -13,7 +13,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import jdbcconnection.ConnectoDataBase;
 
 
 public class connectController extends Application{
@@ -22,6 +21,10 @@ public class connectController extends Application{
 	
 	
 	
+	/**
+	 * Cretion de la premiere fenetre de connexion
+	 * @param PageAuthentification initialisation de la fenetre Stage
+	 */
 	@Override
 	public void start(Stage PageAuthentification) throws Exception {
 		
@@ -51,6 +54,11 @@ public class connectController extends Application{
     @FXML
     private TextField mdp;
 
+    /**
+     * Action sur le button se connecter  et attribution interface en fonction des role
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void OnConnect(ActionEvent event) throws IOException
     {
@@ -81,7 +89,6 @@ public class connectController extends Application{
     	     fenetre2.setTitle("Dasboard");
     	     fenetre2.show();
      }
-     
      if (role.equals("3")) 
      {
     	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();

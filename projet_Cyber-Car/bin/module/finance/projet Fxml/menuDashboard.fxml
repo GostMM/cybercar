@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane style="-fx-background-color: linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036)linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="1056.0" fitWidth="1920.0" opacity="0.25">
+         <image>
+            <Image url="@figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <TabPane>
+         <tabs>
+            <Tab style="-fx-background-color: white;" text="Acceuil">
+               <content>
+                  <BorderPane>
+                     <top>
+                        <ImageView BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@figma/Logo.png" />
+                           </image>
+                           <BorderPane.margin>
+                              <Insets bottom="3.0" left="30.0" />
+                           </BorderPane.margin>
+                        </ImageView>
+                     </top>
+                     <left>
+                        <Pane prefHeight="991.0" prefWidth="244.0" style="-fx-background-color: rgba(0,0,0,0.75)rgba(0,0,0,0.75);" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text fill="WHITE" fontSmoothingType="LCD" layoutX="35.0" layoutY="121.0" stroke="#861313" strokeLineCap="ROUND" strokeWidth="0.0" text="TABLEAU DE BORD">
+                                 <font>
+                                    <Font name="Lato Heavy" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Separator layoutX="11.0" layoutY="349.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                              <ImageView layoutX="12.0" layoutY="313.0">
+                                 <image>
+                                    <Image url="@figma/icon/24/protocols.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="WHITE" layoutX="39.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES STOCK">
+                                 <font>
+                                    <Font name="Lato Heavy" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="suivi" layoutX="36.0" layoutY="368.0" mnemonicParsing="false" onAction="#onSuivi" style="-fx-background-color: NONE;" text="Suivie Commande" textFill="WHITE">
+                                 <font>
+                                    <Font name="Lato Heavy" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="commande" layoutX="32.0" layoutY="400.0" mnemonicParsing="false" onAction="#onCommande" prefHeight="16.0" prefWidth="175.0" style="-fx-background-color: NONE;" text="Commander Nouvelle Voiture" textFill="WHITE">
+                                 <font>
+                                    <Font name="Lato Heavy" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Separator layoutX="11.0" layoutY="506.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                              <Text fill="WHITE" layoutX="41.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONSULTER RAPPORT DE VENTE " wrappingWidth="165.93600463867188">
+                                 <font>
+                                    <Font name="Lato Heavy" size="13.0" />
+                                 </font>
+                              </Text>
+                              <ImageView layoutX="12.0" layoutY="364.0">
+                                 <image>
+                                    <Image url="@figma/Icon=Subnavigation.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="12.0" layoutY="400.0">
+                                 <image>
+                                    <Image url="@figma/Icon=Subnavigation.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="12.0" layoutY="471.0">
+                                 <image>
+                                    <Image url="@figma/icon/24/donate.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="102.0" layoutY="71.0">
+                                 <image>
+                                    <Image url="@figma/menu/Vector.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="12.0" layoutY="547.0">
+                                 <image>
+                                    <Image url="@figma/Icon=Subnavigation.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="rapport" layoutX="35.0" layoutY="547.0" mnemonicParsing="false" onAction="#onRapport" style="-fx-background-color: NONE;" text="Rapport" textFill="WHITE">
+                                 <font>
+                                    <Font name="Lato Heavy" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Separator layoutX="13.0" layoutY="634.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                              <Text fill="WHITE" layoutX="32.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPARTEMENT" wrappingWidth="183.93600463867188">
+                                 <font>
+                                    <Font name="Lato Heavy" size="13.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="rh" layoutX="40.0" layoutY="651.0" mnemonicParsing="false" onAction="#onRh" style="-fx-background-color: NONE;" text="RH" textFill="WHITE">
+                                 <font>
+                                    <Font name="Lato Heavy" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="Vm" layoutX="40.0" layoutY="683.0" mnemonicParsing="false" onAction="#onVm" style="-fx-background-color: NONE;" text="VENTE ET MARKETING" textFill="WHITE">
+                                 <font>
+                                    <Font name="Lato Heavy" size="13.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </left>
+                     <center>
+                        <Pane BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="413.0" fitWidth="620.0" layoutX="72.0" layoutY="529.0">
+                                 <image>
+                                    <Image url="@figma/Portfolios%20Performance.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="141.0" fitWidth="376.0" layoutX="773.0" layoutY="161.0">
+                                 <image>
+                                    <Image url="@figma/square.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="29.0" fitWidth="41.0" layoutX="777.0" layoutY="161.0">
+                                 <image>
+                                    <Image url="@figma/Method=Yandex.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="731.0" layoutY="942.0" preserveRatio="true">
+                                 <image>
+                                    <Image url="@figma/Standard%20Collection%203.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="141.0" fitWidth="376.0" layoutX="773.0" layoutY="348.0">
+                                 <image>
+                                    <Image url="@figma/square.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="141.0" fitWidth="376.0" layoutX="773.0" layoutY="555.0">
+                                 <image>
+                                    <Image url="@figma/square.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="141.0" fitWidth="376.0" layoutX="773.0" layoutY="771.0">
+                                 <image>
+                                    <Image url="@figma/square.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#fff6f6" layoutX="878.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREDIT DISPONIBLE">
+                                 <font>
+                                    <Font name="Beirut Regular" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="credit" fill="#fff6f6" layoutX="942.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 €">
+                                 <font>
+                                    <Font name="Avenir Book" size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fff6f6" layoutX="803.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE DE COMMANDE  EN COURS">
+                                 <font>
+                                    <Font name="Beirut Regular" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="commendeEncours" fill="#fff6f6" layoutX="952.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19">
+                                 <font>
+                                    <Font name="Avenir Book" size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fff6f6" layoutX="875.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE D'EMPLOYEES">
+                                 <font>
+                                    <Font name="Beirut Regular" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="nbEmployee" fill="#fff6f6" layoutX="952.0" layoutY="650.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+                                 <font>
+                                    <Font name="Avenir Book" size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fff6f6" layoutX="854.0" layoutY="796.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre De Voiture Restant">
+                                 <font>
+                                    <Font name="Beirut Regular" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="stock" fill="#fff6f6" layoutX="944.0" layoutY="847.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12 ">
+                                 <font>
+                                    <Font name="Avenir Book" size="16.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="778.0" layoutY="562.0">
+                                 <image>
+                                    <Image url="@figma/people_alt.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="423.0" fitWidth="633.0" layoutX="66.0" layoutY="91.0">
+                                 <image>
+                                    <Image url="@figma/car_dis.png" />
+                                 </image>
+                              </ImageView>
+                              <StackedBarChart fx:id="diagram" layoutX="87.0" layoutY="666.0" prefHeight="260.0" prefWidth="587.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </StackedBarChart>
+                              <Text fx:id="totalVente" fill="WHITE" layoutX="171.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000" />
+                              <Text fx:id="chiffreAffaire" fill="WHITE" layoutX="594.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000" />
+                           </children>
+                        </Pane>
+                     </center>
+                     <right>
+                        <Pane prefHeight="991.0" prefWidth="559.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="924.0" fitWidth="269.0" layoutX="198.0" layoutY="32.0">
+                                 <image>
+                                    <Image url="@figma/Rectangle%20110.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="183.0" fitWidth="176.0" layoutX="245.0" layoutY="67.0">
+                                 <image>
+                                    <Image url="@figma/profile%20image.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="173.0" fitWidth="167.0" layoutX="249.0" layoutY="72.0">
+                                 <image>
+                                    <Image url="@figma/219986.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="WHITE" layoutX="238.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN ET FINANCE">
+                                 <font>
+                                    <Font name="Hiragino Sans W3" size="19.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#ddcece" layoutX="272.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                              <Text fx:id="logDate" fill="#ddcece" layoutX="224.0" layoutY="920.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dernierre Connexion  : 20/03/2022" />
+                              <Text fill="WHITE" layoutX="312.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CFO">
+                                 <font>
+                                    <Font name="Hiragino Sans W3" size="19.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </right>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: white; -fx-margin-left: 10;" text="suivre une commande">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="644.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUIVRE UNE COMMANDE" wrappingWidth="467.21630859375">
+                           <font>
+                              <Font name="System Bold" size="39.0" />
+                           </font>
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="1.0" green="0.30092594027519226" blue="0.6504629850387573" opacity="0.8600000143051147" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                        <TextField fx:id="Nsuivi" floatText="N°" layoutX="660.0" layoutY="385.0" prefHeight="33.0" prefWidth="415.0">
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </TextField>
+                        <JFXTextArea fx:id="reponse" focusColor="RED" layoutX="564.0" layoutY="593.0" prefHeight="234.0" prefWidth="581.0" unFocusColor="#8a7d7d">
+                           <padding>
+                              <Insets left="12.0" />
+                           </padding>
+                        </JFXTextArea>
+                        <Text layoutX="741.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOTRE REPONSE S'AFFICHERA ICI ">
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="1.0" green="0.5138888955116272" blue="0.5138888955116272" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Text>
+                        <JFXButton fx:id="submit" layoutX="1021.0" layoutY="395.0" onAction="#onSubmit" style="-fx-background-color: blue;" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+           
+         </tabs>
+      </TabPane>
+   </children>
+</Pane>

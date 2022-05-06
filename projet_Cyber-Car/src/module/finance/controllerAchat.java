@@ -15,23 +15,39 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.RadioMenuItem;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import jdbcconnection.financeData;
 
+/**
+ * @author MROIVILI MOUSTOIFA 
+ * Cette Classe est le controlleur qui permet de gerer les commandes de voitures 
+ *
+ */
 public class controllerAchat implements Initializable {
 	
 	
-
+	/**
+	 * 															tout les declaration d'attribut
+	 * -------------------------------------------------------------------⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎------------------------------------------------------------------
+	 */
+	
 	int compteurRenault= 0;
 	int compteurTesla =0;
 	int compteurChevrolet=0;
@@ -52,6 +68,8 @@ public class controllerAchat implements Initializable {
 	int identifiantTesla;
 	int identifiantToyota;
 	int identifiantChevrolet;
+	
+	int idEntrepot;
 	
 	
 	
@@ -87,8 +105,23 @@ public class controllerAchat implements Initializable {
 	
 
 
-	
-
+	@FXML
+	private BorderPane Border;
+	@FXML
+	private MenuButton entrepot;
+	@FXML
+    private RadioMenuItem Plaisance;
+	@FXML
+    private RadioMenuItem phoenix;
+    @FXML
+    private RadioMenuItem portLouis;
+    @FXML
+    private ToggleGroup livre;
+    @FXML
+    private TextField SetEntrepot;
+    
+    @FXML
+    private RadioMenuItem bTombeau;
 
     @FXML
     private Text CPrix;
@@ -214,11 +247,16 @@ public class controllerAchat implements Initializable {
     @FXML
     private Button suppTo;
     
+    
 
- 
+    /**
+	 * 															tout les declaration d'attribut
+	 * -------------------------------------------------------------------⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎------------------------------------------------------------------
+	 */
 
     @FXML
-    void onDashboard(ActionEvent event) {
+    void onDashboard(ActionEvent event)
+    {
 
     }
     
@@ -359,23 +397,23 @@ public class controllerAchat implements Initializable {
 		        	
 		        	if(Renaultid.contains(String.valueOf(ValeurPasser.get(i))))	
 		        	{
-		        		financeData.setCommande(ValeurPasser.get(i), RenaultNom.get(Renaultid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), 1);
-		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),1);
+		        		financeData.setCommande(ValeurPasser.get(i), RenaultNom.get(Renaultid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), idEntrepot);
+		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),idEntrepot);
 		        	}
 		        	if(Teslaid.contains(String.valueOf(ValeurPasser.get(i))))
 		        	{
-		        		financeData.setCommande(ValeurPasser.get(i), TeslaNom.get(Teslaid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), 1);
-		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),1);
+		        		financeData.setCommande(ValeurPasser.get(i), TeslaNom.get(Teslaid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), idEntrepot);
+		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),idEntrepot);
 		        	}
 		        	if(chevroletid.contains(String.valueOf(ValeurPasser.get(i))))
 		        	{
-		        		financeData.setCommande(ValeurPasser.get(i), chevroletNom.get(chevroletid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), 1);
-		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),1);
+		        		financeData.setCommande(ValeurPasser.get(i), chevroletNom.get(chevroletid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), idEntrepot);
+		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),idEntrepot);
 		        	}
 		        	if(Toyotaid.contains(String.valueOf(ValeurPasser.get(i))))
 		        	{
-		        		financeData.setCommande(ValeurPasser.get(i), ToyotaNom.get(Toyotaid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), 1);
-		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),1);
+		        		financeData.setCommande(ValeurPasser.get(i), ToyotaNom.get(Toyotaid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)),idEntrepot);
+		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),idEntrepot);
 		        	}
 		        		
 		        	
@@ -408,7 +446,12 @@ public class controllerAchat implements Initializable {
 	
 	
 	
-	
+	/**
+	 * 
+	 * 															Methodes setter pour l'assignation ArrayList en Privée
+	 * ------------------------------------------------------------------------------⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎--------------------------------------------------------
+	 * 
+	 */
 	
 	public static void setToyotaimg(ArrayList<String> toyotaimg) {
 		Toyotaimg = toyotaimg;
@@ -491,9 +534,12 @@ public class controllerAchat implements Initializable {
 	}
 
 
-	
-	
-	
+	/**
+	 * 
+	 * 															Methodes setter pour l'assignation ArrayList en Privée
+	 * ------------------------------------------------------------------------------⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎︎--------------------------------------------------------
+	 * 
+	 */
 	
 	
 	
@@ -501,431 +547,463 @@ public class controllerAchat implements Initializable {
 	
 	
 
-    @FXML
-    void onPr1(ActionEvent event) throws SQLException, FileNotFoundException {
-    	
-    	
-    	
-    	
-    		
-    	if(compteurRenault>=1 && compteurRenault<=Renaultimg.size()-1)	
-    	{
-    		compteurRenault--;
-    		sui1.setDisable(false);
-    		
-    		
-    	}
-    	if(compteurRenault==0)
-    	{
-    		pr1.setDisable(true);
-    	}
- 
-    	
-    	  int nbrVoitureID =0;
-		  InputStream stream = new FileInputStream(Renaultimg.get(compteurRenault)); 
-		  Image image = new Image(stream); VRenault.setImage(image);
-		  RPrix.setText(Renaultprice.get(compteurRenault));
-		  MarqueR.setText(RenaultNom.get(compteurRenault));
-		  VitesseR.setText(RenaultVitesse.get(compteurRenault));
-		  identifiantRenault = Integer.valueOf(Renaultid.get(compteurRenault));
-		  
-			 
-		  for(int i=0 ;i<quantite.size();i++)
-		  {
-			  
-			  if(quantite.get(i)==identifiantRenault)
-			  {
-				  nbrVoitureID++;
-				  
-			  }
-				  
-			  System.out.println("valueur id : "+identifiantRenault+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
-			  
-			  nbrR.setText(String.valueOf(nbrVoitureID));
-		  }
-		  
-		 
-		  
 
-    }
+	/**
+	 *  														Button precedent
+	 *  ------------------------------------------------------⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎---------------------------------------------------------------
+	 */
+	@FXML
+	void onPr1(ActionEvent event) throws SQLException, FileNotFoundException {
 
-    @FXML
-    void onPr2(ActionEvent event) throws SQLException, FileNotFoundException {
-    	
-    	
-    	if(compteurTesla>=1 && compteurTesla<=Teslaimg.size()-1)	
-    	{
-    		compteurTesla--;
-    		sui2.setDisable(false);
-    		
-    		
-    	}
-    	if(compteurTesla==0)
-    	{
-    		pr2.setDisable(true);
-    	}
-    	
-  
-    		
-    	
-    	
-    	  int nbrVoitureID = 0;
-		  InputStream stream = new FileInputStream(Teslaimg.get(compteurTesla)); 
-		  Image image = new Image(stream); VTesla.setImage(image);
-		  TPrix.setText(Teslatprice.get(compteurTesla));
-		  MarqueT.setText(TeslaNom.get(compteurTesla));
-		  VitesseT.setText(TeslaVitesse.get(compteurTesla));
-		  identifiantTesla = Integer.valueOf(Teslaid.get(compteurTesla));
-		  
-			 
-		  for(int i=0 ;i<quantite.size();i++)
-		  {
-			  
-			  if(quantite.get(i)==identifiantTesla)
-			  {
-				  nbrVoitureID++;
-				  
-			  }
-				  
-			  System.out.println("valueur id : "+identifiantTesla+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
-			  
-			  nbrT.setText(String.valueOf(nbrVoitureID));
-		  }
-		  
-		  
-		  
-		  
-		  
 
-    }
 
-    @FXML
-    void onPr3(ActionEvent event) throws SQLException, FileNotFoundException {
-    	
-    	
-    	if(compteurChevrolet>=1 && compteurChevrolet<=chevroletimg.size()-1)	
-    	{
-    		compteurChevrolet--;
-    		sui3.setDisable(false);
-    		
-    		
-    	}
-    	if(compteurChevrolet==0)
-    	{
-    		pr3.setDisable(true);
-    	}
-    	
-    	
+
+
+		if(compteurRenault>=1 && compteurRenault<=Renaultimg.size()-1)	
+		{
+			compteurRenault--;
+			sui1.setDisable(false);
+
+
+		}
+		if(compteurRenault==0)
+		{
+			pr1.setDisable(true);
+		}
+
+
+		int nbrVoitureID =0;
+		InputStream stream = new FileInputStream(Renaultimg.get(compteurRenault)); 
+		Image image = new Image(stream); VRenault.setImage(image);
+		RPrix.setText(Renaultprice.get(compteurRenault));
+		MarqueR.setText(RenaultNom.get(compteurRenault));
+		VitesseR.setText(RenaultVitesse.get(compteurRenault));
+		identifiantRenault = Integer.valueOf(Renaultid.get(compteurRenault));
+
+
+		for(int i=0 ;i<quantite.size();i++)
+		{
+
+			if(quantite.get(i)==identifiantRenault)
+			{
+				nbrVoitureID++;
+
+			}
+
+			System.out.println("valueur id : "+identifiantRenault+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
+
+			nbrR.setText(String.valueOf(nbrVoitureID));
+		}
+
+
+
+
+	}
+
+	@FXML
+	void onPr2(ActionEvent event) throws SQLException, FileNotFoundException {
+
+
+		if(compteurTesla>=1 && compteurTesla<=Teslaimg.size()-1)	
+		{
+			compteurTesla--;
+			sui2.setDisable(false);
+
+
+		}
+		if(compteurTesla==0)
+		{
+			pr2.setDisable(true);
+		}
+
+
+
+
+
+		int nbrVoitureID = 0;
+		InputStream stream = new FileInputStream(Teslaimg.get(compteurTesla)); 
+		Image image = new Image(stream); VTesla.setImage(image);
+		TPrix.setText(Teslatprice.get(compteurTesla));
+		MarqueT.setText(TeslaNom.get(compteurTesla));
+		VitesseT.setText(TeslaVitesse.get(compteurTesla));
+		identifiantTesla = Integer.valueOf(Teslaid.get(compteurTesla));
+
+
+		for(int i=0 ;i<quantite.size();i++)
+		{
+
+			if(quantite.get(i)==identifiantTesla)
+			{
+				nbrVoitureID++;
+
+			}
+
+			System.out.println("valueur id : "+identifiantTesla+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
+
+			nbrT.setText(String.valueOf(nbrVoitureID));
+		}
+
+
+
+
+
+
+	}
+
+	@FXML
+	void onPr3(ActionEvent event) throws SQLException, FileNotFoundException {
+
+
+		if(compteurChevrolet>=1 && compteurChevrolet<=chevroletimg.size()-1)	
+		{
+			compteurChevrolet--;
+			sui3.setDisable(false);
+
+
+		}
+		if(compteurChevrolet==0)
+		{
+			pr3.setDisable(true);
+		}
+
+
+
+
+
+
+		int nbrVoitureID = 0;
+		InputStream stream = new FileInputStream(chevroletimg.get(compteurChevrolet)); 
+		Image image = new Image(stream); VChevrolet.setImage(image);
+		CPrix.setText(chevroletprice.get(compteurChevrolet));
+		MarqueC.setText(chevroletNom.get(compteurChevrolet));
+		VitesseC.setText(chevroletVitesse.get(compteurChevrolet));
+		identifiantChevrolet = Integer.valueOf(chevroletid.get(compteurChevrolet));
+
+
+		for(int i=0 ;i<quantite.size();i++)
+		{
+
+			if(quantite.get(i)== identifiantChevrolet)
+			{
+				nbrVoitureID++;
+
+			}
+
+			System.out.println("valueur id : "+identifiantChevrolet+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
+
+			nbrC.setText(String.valueOf(nbrVoitureID));
+		}
+
+
+
+
+	}
+
+	@FXML
+	void onPr4(ActionEvent event) throws SQLException, FileNotFoundException {
+
+
+		if(compteurToyota>=1 && compteurToyota<=9)	
+		{
+			compteurToyota--;
+			sui4.setDisable(false);
+
+
+		}
+		if(compteurToyota==0)
+		{
+			pr4.setDisable(true);
+		}
+
+
+
+
+
+
+		int  nbrVoitureID =0 ;
+		InputStream stream = new FileInputStream(Toyotaimg.get(compteurToyota)); 
+		Image image = new Image(stream); VToyota.setImage(image);
+		ToPrix.setText(Toyotaprice.get(compteurToyota));
+		MarqueTo.setText(ToyotaNom.get(compteurToyota));
+		VitesseTo.setText(ToyotaVitesse.get(compteurToyota));
+		identifiantToyota = Integer.valueOf(Toyotaid.get(compteurToyota));
+
+
+		for(int i=0 ;i<quantite.size();i++)
+		{
+
+			if(quantite.get(i)==identifiantToyota)
+			{
+				nbrVoitureID++;
+
+			}
+
+			System.out.println("valueur id : "+identifiantToyota+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
+
+			nbrC.setText(String.valueOf(nbrVoitureID));
+		}
+
+
+
+
+
+
+	}
+
+
+	/**
+	 *  														Button precedent
+	 *  ------------------------------------------------------︎---------------------------------------------------------------
+	 *
+	 */
+
+
+
+	/**
+	 *  														Button suivant
+	 *  ------------------------------------------------------⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎---------------------------------------------------------------
+	 */
+
+
+
+	@FXML
+	void onSui1(ActionEvent event) throws FileNotFoundException, SQLException {
+
+		if(compteurRenault<=Renaultimg.size() && compteurRenault>=0)
+		{
+			compteurRenault++;
+		}
+
+
+		if( compteurRenault>=Renaultimg.size()-1)
+		{
+			sui1.setDisable(true);
+
+
+		}
+
+		if(compteurRenault>0)
+		{
+			pr1.setDisable(false);
+		}
+
+
+
+
+
+		int nbrVoitureID = 0;
+		InputStream stream = new FileInputStream(Renaultimg.get(compteurRenault)); 
+		Image image = new Image(stream); VRenault.setImage(image);
+		RPrix.setText(Renaultprice.get(compteurRenault));
+		MarqueR.setText(RenaultNom.get(compteurRenault));
+		VitesseR.setText(RenaultVitesse.get(compteurRenault));
+		identifiantRenault = Integer.valueOf(Renaultid.get(compteurRenault));
+
+
+		for(int i=0 ;i<quantite.size();i++)
+		{
+
+			if(quantite.get(i)==identifiantRenault)
+			{
+				nbrVoitureID++;
+
+			}
+
+			System.out.println("valueur id : "+identifiantRenault+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
+
+			nbrR.setText(String.valueOf(nbrVoitureID));
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+
+	@FXML
+	void onSui2(ActionEvent event) throws SQLException, FileNotFoundException {
+
+
+
+		if(compteurTesla<=Teslaimg.size() && compteurTesla>=0)
+		{
+			compteurTesla++;
+		}
+
+
+		if( compteurTesla>=Teslaimg.size()-1)
+		{
+			sui2.setDisable(true);
+
+
+		}
+
+		if(compteurTesla>0)
+		{
+			pr2.setDisable(false);
+		}
+
+
+
+
+
+
+
+
+		int nbrVoitureID = 0;
+		InputStream stream = new FileInputStream(Teslaimg.get(compteurTesla)); 
+		Image image = new Image(stream); VTesla.setImage(image);
+		TPrix.setText(Teslatprice.get(compteurTesla));
+		MarqueT.setText(TeslaNom.get(compteurTesla)); 
+		VitesseT.setText(TeslaVitesse.get(compteurTesla));
+		identifiantTesla = Integer.valueOf(Teslaid.get(compteurTesla));
+
+		for(int i=0 ;i<quantite.size();i++)
+		{
+
+			if(quantite.get(i)==identifiantTesla)
+			{
+				nbrVoitureID++;
+
+			}
+
+			System.out.println("valueur id : "+identifiantTesla+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
+
+			nbrT.setText(String.valueOf(nbrVoitureID));
+		}
+
+
+
+	}
+
+	@FXML
+	void onSui3(ActionEvent event) throws SQLException, FileNotFoundException {
+
+
+
+		if(compteurChevrolet<=chevroletimg.size() && compteurChevrolet>=0)
+		{
+			compteurChevrolet++;
+		}
+
+
+		if( compteurChevrolet>=chevroletimg.size()-1)
+		{
+			sui3.setDisable(true);
+
+
+		}
+
+		if(compteurChevrolet>0)
+		{
+			pr3.setDisable(false);
+		}
+
+
+
+
+
+
+
+		int nbrVoitureID =0;
+		InputStream stream = new FileInputStream(chevroletimg.get(compteurChevrolet)); 
+		Image image = new Image(stream); VChevrolet.setImage(image);
+		CPrix.setText(chevroletprice.get(compteurChevrolet));
+		MarqueC.setText(chevroletNom.get(compteurChevrolet));
+		VitesseC.setText(chevroletVitesse.get(compteurChevrolet));
+		identifiantChevrolet= Integer.valueOf(chevroletid.get(compteurChevrolet));
+
+		for(int i=0 ;i<quantite.size();i++)
+		{
+
+			if(quantite.get(i)==identifiantChevrolet)
+			{
+				nbrVoitureID++;
+
+			}
+
+			System.out.println("valueur id : "+identifiantChevrolet+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
+
+			nbrC.setText(String.valueOf(nbrVoitureID));
+		}
+
+
+
+	}
+
+	@FXML
+	void onSui4(ActionEvent event) throws SQLException, FileNotFoundException {
+
+
+		if(compteurToyota<=Toyotaimg.size() && compteurToyota>=0)
+		{
+			compteurToyota++;
+		}
+
+
+		if( compteurToyota>=Toyotaimg.size()-1)
+		{
+			sui4.setDisable(true);
+
+
+		}
+
+		if(compteurToyota>0)
+		{
+			pr4.setDisable(false);
+		}
+
+
+
+
+
+		int nbrVoitureID =0;
+		InputStream stream = new FileInputStream(Toyotaimg.get(compteurToyota)); 
+		Image image = new Image(stream); VToyota.setImage(image);
+		ToPrix.setText(Toyotaprice.get(compteurToyota));
+		MarqueTo.setText(ToyotaNom.get(compteurToyota));
+		VitesseTo.setText(ToyotaVitesse.get(compteurToyota));
+		identifiantToyota= Integer.valueOf(Toyotaid.get(compteurToyota));
+
+		for(int i=0 ;i<quantite.size();i++)
+		{
+
+			if(quantite.get(i)==identifiantToyota)
+			{
+				nbrVoitureID++;
+
+			}
+
+			System.out.println("valueur id : "+identifiantToyota+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
+
+			nbrTo.setText(String.valueOf(nbrVoitureID));
+		}
+
+
+
+
+	}
+
+	/**
+	 *  														Button suivant
+	 *  ------------------------------------------------------︎---------------------------------------------------------------
+	 */
+
+
     
-    	
-    	
-    	
-    	  int nbrVoitureID = 0;
-		  InputStream stream = new FileInputStream(chevroletimg.get(compteurChevrolet)); 
-		  Image image = new Image(stream); VChevrolet.setImage(image);
-		  CPrix.setText(chevroletprice.get(compteurChevrolet));
-		  MarqueC.setText(chevroletNom.get(compteurChevrolet));
-		  VitesseC.setText(chevroletVitesse.get(compteurChevrolet));
-		  identifiantChevrolet = Integer.valueOf(chevroletid.get(compteurChevrolet));
-		  
-			 
-		  for(int i=0 ;i<quantite.size();i++)
-		  {
-			  
-			  if(quantite.get(i)== identifiantChevrolet)
-			  {
-				  nbrVoitureID++;
-				  
-			  }
-				  
-			  System.out.println("valueur id : "+identifiantChevrolet+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
-			  
-			  nbrC.setText(String.valueOf(nbrVoitureID));
-		  }
-		  
-		  
-
-
-    }
     
-    @FXML
-    void onPr4(ActionEvent event) throws SQLException, FileNotFoundException {
-    	
-    	
-    	if(compteurToyota>=1 && compteurToyota<=9)	
-    	{
-    		compteurToyota--;
-    		sui4.setDisable(false);
-    		
-    		
-    	}
-    	if(compteurToyota==0)
-    	{
-    		pr4.setDisable(true);
-    	}
-    	
-    	
-    	
-    		
-    
-    	
-    	  int  nbrVoitureID =0 ;
-		  InputStream stream = new FileInputStream(Toyotaimg.get(compteurToyota)); 
-		  Image image = new Image(stream); VToyota.setImage(image);
-		  ToPrix.setText(Toyotaprice.get(compteurToyota));
-		  MarqueTo.setText(ToyotaNom.get(compteurToyota));
-		  VitesseTo.setText(ToyotaVitesse.get(compteurToyota));
-		  identifiantToyota = Integer.valueOf(Toyotaid.get(compteurToyota));
-		  
-			 
-		  for(int i=0 ;i<quantite.size();i++)
-		  {
-			  
-			  if(quantite.get(i)==identifiantToyota)
-			  {
-				  nbrVoitureID++;
-				  
-			  }
-				  
-			  System.out.println("valueur id : "+identifiantToyota+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
-			  
-			  nbrC.setText(String.valueOf(nbrVoitureID));
-		  }
-		  
-		  
-		  
-		  
 
-
-    }
-
-    @FXML
-    void onSui1(ActionEvent event) throws FileNotFoundException, SQLException {
-    	
-    	if(compteurRenault<=Renaultimg.size() && compteurRenault>=0)
-    	{
-    		compteurRenault++;
-    	}
-    		
-    	
-    	if( compteurRenault>=Renaultimg.size()-1)
-    	{
-    		sui1.setDisable(true);
-    		
-    		
-    	}
-    	
-    	if(compteurRenault>0)
-    	{
-    		pr1.setDisable(false);
-    	}
-    	
-    		
-    
-    		
-    	  
-    	  int nbrVoitureID = 0;
-		  InputStream stream = new FileInputStream(Renaultimg.get(compteurRenault)); 
-		  Image image = new Image(stream); VRenault.setImage(image);
-		  RPrix.setText(Renaultprice.get(compteurRenault));
-		  MarqueR.setText(RenaultNom.get(compteurRenault));
-		  VitesseR.setText(RenaultVitesse.get(compteurRenault));
-		  identifiantRenault = Integer.valueOf(Renaultid.get(compteurRenault));
-		  
-		 
-		  for(int i=0 ;i<quantite.size();i++)
-		  {
-			  
-			  if(quantite.get(i)==identifiantRenault)
-			  {
-				  nbrVoitureID++;
-				  
-			  }
-				  
-			  System.out.println("valueur id : "+identifiantRenault+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
-			  
-			  nbrR.setText(String.valueOf(nbrVoitureID));
-		  }
-    	
-    	
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		 
-    	
-
-    }
-
-    @FXML
-    void onSui2(ActionEvent event) throws SQLException, FileNotFoundException {
-    	
-    	
-    	
-    	if(compteurTesla<=Teslaimg.size() && compteurTesla>=0)
-    	{
-    		compteurTesla++;
-    	}
-    		
-    	
-    	if( compteurTesla>=Teslaimg.size()-1)
-    	{
-    		sui2.setDisable(true);
-    		
-    		
-    	}
-    	
-    	if(compteurTesla>0)
-    	{
-    		pr2.setDisable(false);
-    	}
-    	
-    	
-    	
-    	
-    	
-    	
-  
-    	
-    	  int nbrVoitureID = 0;
-		  InputStream stream = new FileInputStream(Teslaimg.get(compteurTesla)); 
-		  Image image = new Image(stream); VTesla.setImage(image);
-		  TPrix.setText(Teslatprice.get(compteurTesla));
-		  MarqueT.setText(TeslaNom.get(compteurTesla)); 
-		  VitesseT.setText(TeslaVitesse.get(compteurTesla));
-		  identifiantTesla = Integer.valueOf(Teslaid.get(compteurTesla));
-			 
-		  for(int i=0 ;i<quantite.size();i++)
-		  {
-			  
-			  if(quantite.get(i)==identifiantTesla)
-			  {
-				  nbrVoitureID++;
-				  
-			  }
-				  
-			  System.out.println("valueur id : "+identifiantTesla+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
-			  
-			  nbrT.setText(String.valueOf(nbrVoitureID));
-		  }
-
-
-
-    }
-
-    @FXML
-    void onSui3(ActionEvent event) throws SQLException, FileNotFoundException {
-
-    	
-    	
-    	if(compteurChevrolet<=chevroletimg.size() && compteurChevrolet>=0)
-    	{
-    		compteurChevrolet++;
-    	}
-    		
-    	
-    	if( compteurChevrolet>=chevroletimg.size()-1)
-    	{
-    		sui3.setDisable(true);
-    		
-    		
-    	}
-    	
-    	if(compteurChevrolet>0)
-    	{
-    		pr3.setDisable(false);
-    	}
-    	
-    	
-
-    	
-    		
-    
-    	
-    	  int nbrVoitureID =0;
-		  InputStream stream = new FileInputStream(chevroletimg.get(compteurChevrolet)); 
-		  Image image = new Image(stream); VChevrolet.setImage(image);
-		  CPrix.setText(chevroletprice.get(compteurChevrolet));
-		  MarqueC.setText(chevroletNom.get(compteurChevrolet));
-		  VitesseC.setText(chevroletVitesse.get(compteurChevrolet));
-		  identifiantChevrolet= Integer.valueOf(chevroletid.get(compteurChevrolet));
-			 
-		  for(int i=0 ;i<quantite.size();i++)
-		  {
-			  
-			  if(quantite.get(i)==identifiantChevrolet)
-			  {
-				  nbrVoitureID++;
-				  
-			  }
-				  
-			  System.out.println("valueur id : "+identifiantChevrolet+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
-			  
-			  nbrC.setText(String.valueOf(nbrVoitureID));
-		  }
-		  
-		 
-	    	
-    }
-
-    @FXML
-    void onSui4(ActionEvent event) throws SQLException, FileNotFoundException {
-    	
-
-    	if(compteurToyota<=Toyotaimg.size() && compteurToyota>=0)
-    	{
-    		compteurToyota++;
-    	}
-    		
-    	
-    	if( compteurToyota>=Toyotaimg.size()-1)
-    	{
-    		sui4.setDisable(true);
-    		
-    		
-    	}
-    	
-    	if(compteurToyota>0)
-    	{
-    		pr4.setDisable(false);
-    	}
-    	
-    	
-    		
-    
-    	
-    	  int nbrVoitureID =0;
-		  InputStream stream = new FileInputStream(Toyotaimg.get(compteurToyota)); 
-		  Image image = new Image(stream); VToyota.setImage(image);
-		  ToPrix.setText(Toyotaprice.get(compteurToyota));
-		  MarqueTo.setText(ToyotaNom.get(compteurToyota));
-		  VitesseTo.setText(ToyotaVitesse.get(compteurToyota));
-		  identifiantToyota= Integer.valueOf(Toyotaid.get(compteurToyota));
-			 
-		  for(int i=0 ;i<quantite.size();i++)
-		  {
-			  
-			  if(quantite.get(i)==identifiantToyota)
-			  {
-				  nbrVoitureID++;
-				  
-			  }
-				  
-			  System.out.println("valueur id : "+identifiantToyota+"  ===> valeur quantite : "+quantite.get(i)+"====> NB FOIS"+nbrVoitureID );
-			  
-			  nbrTo.setText(String.valueOf(nbrVoitureID));
-		  }
-		  
-		  
-
-
-    }
-    
-   
-
+    /**
+     * Methode pour lancer les Premieres image dans la base donnée 
+     * @throws FileNotFoundException
+     */
     void OnafficheAllImage() throws FileNotFoundException
     {
     	//renault 
@@ -968,6 +1046,17 @@ public class controllerAchat implements Initializable {
 	
 		
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     *  Methodes pour la faire un ajout dans le panier avec le button achat 
+     */
     
     @FXML
     void onRachat(ActionEvent event)
@@ -1161,6 +1250,17 @@ public class controllerAchat implements Initializable {
 
     }
    
+  
+    
+    
+    
+    
+    /**
+     *  Methodes pour supprimer un produit dans le panier 
+     * 
+     */
+    
+    
     @FXML
     void onSuppC(ActionEvent event) 
     {
@@ -1390,14 +1490,142 @@ public class controllerAchat implements Initializable {
     }
     
     
+    
+    
+    /**
+     * 
+     * method pour la  confirmation des achats
+     */
+    
     @FXML
     void onValide(ActionEvent event) {
     	
+    	if(!nbrVoiture.getText().equals("0"))
+    	{
+    		ShowPanier();
     	
-    	ShowPanier();
+    	}else
+    	{
+    		Alert alert = new Alert(AlertType.INFORMATION);
+    		alert.setTitle("panier vide");
+    		alert.setHeaderText("information");
+    		alert.setContentText("votre panier est vide");
+    		alert.showAndWait();
+    		
+    	}
+    	
+    	
+
+    }
+    
+    
+
+    
+    @FXML
+    void onVm(ActionEvent event) {
+    	
+        Parent p = Border.getParent().parentProperty().getValue();
+        TabPane tabPane = (TabPane) p;
+        tabPane.getSelectionModel().select(3);
+		
+    	
+
+    }
+    Stage fenetre1 ;
+    @FXML
+    void onCommande(ActionEvent event)
+    {
+
+    Parent p = Border.getParent().parentProperty().getValue();
+    TabPane tabPane = (TabPane) p;
+    tabPane.getSelectionModel().select(2);
+    	
+    }
+    
+
+    @FXML
+    void onLogout(ActionEvent event) {
+
+    }
+    @FXML
+    void onRh(ActionEvent event) {
+    	
+        Parent p = Border.getParent().parentProperty().getValue();
+        TabPane tabPane = (TabPane) p;
+        tabPane.getSelectionModel().select(4);
+        
 
     }
 
+    @FXML
+    void onSuivi(ActionEvent event) {
+        Parent p = Border.getParent().parentProperty().getValue();
+        TabPane tabPane = (TabPane) p;
+        tabPane.getSelectionModel().select(1);
+
+    }
+    
+    
+    
+    
+    
+    /**
+     * 
+     * Method pour le choix d'entrepot
+     * 
+     */
+    @FXML
+    void getByBaie(ActionEvent event)
+    {
+
+    		this.entrepot.setText(bTombeau.getText());
+    		this.idEntrepot = 4;
+    		SetEntrepot.setText(entrepot.getText());
+    		
+  
+    }
+
+    @FXML
+    void getByPh(ActionEvent event) {
+    	
+
+    		this.entrepot.setText(phoenix.getText());
+    		this.idEntrepot = 3;
+    		SetEntrepot.setText(entrepot.getText());
+  
+    }
+
+    @FXML
+    void getByPlais(ActionEvent event) {
+    	
+
+    		this.entrepot.setText(Plaisance.getText());
+    		idEntrepot = 2;
+    		SetEntrepot.setText(entrepot.getText());
+    		
+
+
+    }
+
+    @FXML
+    void getByPort(ActionEvent event) {
+    	
+
+    		this.entrepot.setText(portLouis.getText());
+    		idEntrepot = 1;
+    		SetEntrepot.setText(entrepot.getText());
+    		
+ 
+
+    }
+
+    
+    
+
+    /**
+	 * La methode initialize provient de L'interface Initializable, elle permet de lancer dès le lancement de l'application tout les donnée necessaires informative 
+	 * dans l'interface
+	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) 
 	{
@@ -1410,6 +1638,7 @@ public class controllerAchat implements Initializable {
 		
 	try {
 			
+			
 			financeData.getAllVoitureRenault();
 			financeData.getallvoitureTestla();
 			financeData.getallvoitureChevrolet();
@@ -1419,6 +1648,13 @@ public class controllerAchat implements Initializable {
 			suppT.setDisable(true);
 			suppTo.setDisable(true);
 			suppC.setDisable(true);
+			nbrVoiture.setText("0");
+			total.setText("0");
+			this.entrepot.setText(portLouis.getText());
+			portLouis.setSelected(true);
+			SetEntrepot.setText(entrepot.getText());
+			
+			
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

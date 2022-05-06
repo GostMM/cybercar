@@ -2,6 +2,12 @@ package module.finance;
 
 import javafx.beans.property.SimpleStringProperty;
 
+/**
+ * @author MROIVILI MOUSTOIFA
+ * 
+ * classe permettant de creer la table  pour le recapitulatif du panier Pour les achat 
+ *
+ */
 public class panierData 
 {
 
