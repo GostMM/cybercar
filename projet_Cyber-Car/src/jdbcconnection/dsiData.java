@@ -23,10 +23,10 @@ public class dsiData {
             
             {
 				
-				
+				dsiController.id = rs.getInt("id");
 				dsiController.setName(rs.getString("Nom"));
-				dsiController.setFonction(rs.getString("Fonction"));
-				dsiController.setDate(rs.getString("Date d'embauche"));
+				dsiController.setFonction(rs.getString("fonction"));
+				dsiController.setDate(rs.getString("DateEmbauche"));
 					
 			}
             
@@ -38,26 +38,20 @@ public class dsiData {
 	
 		
 	}
+	
 
-	public static void getSecondEmployee() throws SQLException 
+	public static void getSecondEmployee(String login,String mdp,int id) throws SQLException 
 	{
-		String query = "{ call dsi_table() }";
+		String query = "{ call updateLogin(?,?,?) }";
         ResultSet rs;
 
-        try (Connection conn = ConnectoDataBase.getConnection();
-                CallableStatement stmt = conn.prepareCall(query))
-        {
-            rs = stmt.executeQuery();
-            if (rs.next())
-            
-            {
-				
-				
-				dsiController.setName(rs.getString("Nom"));
-				dsiController.setFonction(rs.getString("Fonction"));
-				dsiController.setDate(rs.getString("Date d'embauche"));
-					
-			}
+        try
+        { Connection conn = ConnectoDataBase.getConnection();
+        	CallableStatement stmt = conn.prepareCall(query);
+        	stmt.setString(1,login);
+        	stmt.setString(2, mdp);
+        	stmt.setInt(3, id);
+            stmt.execute();
             
             
             	
@@ -65,5 +59,7 @@ public class dsiData {
             System.out.println(ex.getMessage());
         }
 	}
+	
+	
 
 }
