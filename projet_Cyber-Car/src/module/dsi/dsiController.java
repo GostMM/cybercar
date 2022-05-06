@@ -104,7 +104,7 @@ public class dsiController implements Initializable
 			e.printStackTrace();
 			
 			try {
-				dsiData.getSecondEmployee();
+				dsiData.getDernierEmployee();
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
