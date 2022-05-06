@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="391.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Student.controleurDinscription">
+   <children>
+      <ImageView fitHeight="596.0" fitWidth="398.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@.../src/wallpaper/pexels-valdemaras-d-1647962.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="name" layoutX="119.0" layoutY="201.0" prefHeight="29.0" prefWidth="217.0" />
+      <Label layoutX="53.0" layoutY="204.0" prefHeight="23.0" prefWidth="60.0" text="Name : ">
+         <font>
+            <Font name="525icons" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address" layoutX="119.0" layoutY="255.0" prefHeight="29.0" prefWidth="217.0" />
+      <Label layoutX="40.0" layoutY="258.0" prefHeight="23.0" prefWidth="73.0" text="Address : ">
+         <font>
+            <Font name="525icons" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="age" layoutX="119.0" layoutY="310.0" prefHeight="29.0" prefWidth="60.0" />
+      <TextField fx:id="identifiant" layoutX="119.0" layoutY="149.0" prefHeight="29.0" prefWidth="217.0" />
+      <Label layoutX="47.0" layoutY="152.0" prefHeight="23.0" prefWidth="73.0" text="identify : ">
+         <font>
+            <Font name="525icons" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="313.0" prefHeight="23.0" prefWidth="73.0" text="Age :   " textAlignment="RIGHT">
+         <font>
+            <Font name="525icons" size="15.0" />
+         </font>
+      </Label>
+      <Button id="redline" fx:id="add" layoutX="57.0" layoutY="501.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="29.0" prefWidth="278.0" style="-fx-border-color: WHITE; -fx-border-radius: 6; -fx-border-width: 3;" stylesheets="@stylesheet.css" text="AJOUTER " textFill="WHITE" />
+      <Text layoutX="98.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSCRIPTION ETUDIANT" textAlignment="CENTER" wrappingWidth="229.0">
+         <font>
+            <Font name="Source Code Pro" size="15.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="femal" layoutX="120.0" layoutY="367.0" mnemonicParsing="false" onAction="#choixF" text="F" />
+      <RadioButton fx:id="mal" layoutX="120.0" layoutY="400.0" mnemonicParsing="false" onAction="#choixM" text="M" />
+      <Label layoutX="24.0" layoutY="373.0" prefHeight="23.0" prefWidth="81.0" text="Gender : " textAlignment="RIGHT" textFill="#c9c9c9">
+         <font>
+            <Font name="525icons" size="16.0" />
+         </font>
+      </Label>
+      <ProgressIndicator layoutX="179.0" layoutY="541.0" prefHeight="41.0" prefWidth="81.0" progress="0.0">
+         <effect>
+            <ColorAdjust brightness="0.21" contrast="0.74" hue="-0.36" saturation="-0.26" />
+         </effect>
+      </ProgressIndicator>
+   </children>
+</Pane>

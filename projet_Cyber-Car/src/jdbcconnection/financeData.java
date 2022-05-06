@@ -754,6 +754,65 @@ public class financeData
 		
 	}
 	
+	
+	public static boolean getAllLocalistation()
+	{
+		
+		String query = "{ call localisation() }";
+        ResultSet rs;
+
+        try (Connection conn = ConnectoDataBase.getConnection();
+             CallableStatement stmt = conn.prepareCall(query))
+        {
+            rs = stmt.executeQuery();
+            while(rs.next())
+            {
+            	adminController.Refs.add(rs.getString("RefrenceComande"));	
+            	adminController.Localisations.add("Commande en cours de Traitement");
+            
+            	//System.out.println(rs.getString("RefrenceComande"));
+            }
+            
+            rs.close();
+            return true;
+        } catch (SQLException ex) {
+        	
+            System.out.println(ex.getMessage());
+            return false;
+        }
+		
+		
+	}
+	
+	public static boolean getLocalistation(int i)
+	{
+		
+		String query = "{ call Nsuivi(?) }";
+        ResultSet rs;
+
+        try (Connection conn = ConnectoDataBase.getConnection();
+             CallableStatement stmt = conn.prepareCall(query))
+        {
+        	stmt.setInt(1,i);
+            rs = stmt.executeQuery();
+            while(rs.next())
+            {
+            		
+            	adminController.Localisation  = "Pas encore de donnée disponible pour la voiture "+rs.getString("nomVoiture");
+            
+            	//System.out.println(rs.getString("RefrenceComande"));
+            }
+            
+            rs.close();
+            return true;
+        } catch (SQLException ex) {
+        	
+            System.out.println(ex.getMessage());
+            return false;
+        }
+		
+		
+	}
 
 }
 	

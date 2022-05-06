@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.PieChart;
 import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
@@ -60,6 +62,11 @@ public class adminController implements Initializable {
 	 * 															tout les declaration d'attribut
 	 * -------------------------------------------------------------------⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎⬇︎------------------------------------------------------------------
 	 */
+	
+	
+	
+	public static ArrayList<String> Refs  = new ArrayList<String>();
+	public static ArrayList<String> Localisations  = new ArrayList<String>();
 	
 	
 	
@@ -109,7 +116,7 @@ public class adminController implements Initializable {
     private TextField Nsuivi;
     
     @FXML
-    public static TabPane selection;
+    public  TabPane selection;
 
 	@FXML
     private TextField Ntransaction;
@@ -118,7 +125,7 @@ public class adminController implements Initializable {
     private TextField Resmise;
 
     @FXML
-    public static Button Vm;
+    public  Button Vm;
 
     @FXML
     private Tab acceuils;
@@ -206,7 +213,7 @@ public class adminController implements Initializable {
     private TableColumn<Profiles,String> prenom;
 
     @FXML
-    private Button rapport;
+    public  Button rapport;
 
     @FXML
     private TableColumn<Vente , Number> remiseA;
@@ -251,7 +258,19 @@ public class adminController implements Initializable {
     private TableView<Profiles> tableRh;
 
     @FXML
-    private static Tab ventte;
+    private Tab ventte;
+    
+    @FXML
+    private PieChart chartpie;
+    
+    @FXML 
+    private TableView<ListeDeComande> TableComande;
+    @FXML 
+    private TableColumn<ListeDeComande, String> RefCommande;
+    @FXML 
+    private TableColumn<ListeDeComande, String> LocalisationComande;
+    
+    public static String Localisation ;
     
     
     
@@ -291,21 +310,31 @@ public class adminController implements Initializable {
  
     	diagram.getData().add(series);// attribution des donnée dans le graphique 
     	
+    	
+    	
+    	
+    	
+    	
+    	
+    	ObservableList<PieChart.Data> pieChartData = 
+    			(FXCollections.observableArrayList(
+    					new PieChart.Data("Port Louis ", 2),
+    					new PieChart.Data("Baie du Tombeau ", 2),
+    					new PieChart.Data("Phonix ", 2),
+    					new PieChart.Data("Plaisance "+2, 2)
+    					));
+
+    	
+
+    	chartpie.setData(pieChartData);
+		
+ 
+    	
    }
     
     
-    /**
-     * @param event 
-     * clic sur onglet Commander
-     */
-    @FXML
-    void onCommande(ActionEvent event)
-    {
-    	
-    	selection.getSelectionModel().select(shop); // direction Commander Voiture
+   
 
-    }
-    
     /**
      * 
      *  
@@ -358,13 +387,13 @@ public class adminController implements Initializable {
 		  
 		 
     }
-    
-    
+
     /**
      * Creation de la table contenant les donnée du Departement Vente 
      * ObservableList est une Collection  qui vas contenir des objet de Types Vente
      * la boucle pour qui vas ajouter a tour de role chaque objet a creer 
      */
+    
     void tableVenteLaunch()
     {
     	
@@ -384,11 +413,29 @@ public class adminController implements Initializable {
     	
     }
     
+    
+    void tableSuivi()
+    {
+    	ObservableList<ListeDeComande>data= FXCollections.observableArrayList();
+    	
+    	for(int i=0;i<Refs.size();i++)
+    	{
+    		data.add(new ListeDeComande(Refs.get(i),Localisations.get(i)));// ajout des donnne contenue dans les arrayList de la vente 
+    	}
+    	
+    	RefCommande.setCellValueFactory(new PropertyValueFactory<ListeDeComande,String>("Reference"));// assocition de la colone au donneée de l'objet
+    	LocalisationComande.setCellValueFactory(new PropertyValueFactory<ListeDeComande,String>("Localisation"));// assocition de la colone au donneée de l'objet
+    	TableComande.setItems(data);// assignation des donnée des l'objet à la table 
+    }
+    
+    /**
+     *  clic sur le tableau vente affiche la reference dans TextField
+     */
+    
     @FXML
     void selectedd(MouseEvent event)
     {
     	try	{
-    		System.out.println(table.getSelectionModel().getSelectedItem().getReference());
     		Ntransaction.setText(String.valueOf(table.getSelectionModel().getSelectedItem().getReference()));
     	
     	}catch(Exception e)
@@ -399,15 +446,46 @@ public class adminController implements Initializable {
     }
 
    
-
+    
+    
+    
+//---------- clic sur on 
     @FXML
     void onRh(ActionEvent event) {
-    	
-    	
+
+
     	selection.getSelectionModel().select(depRh);
 
     }
+    @FXML
+    void onSuivi(ActionEvent event)
+    {
 
+    	selection.getSelectionModel().select(suivreTab);
+
+    }
+    @FXML
+    void onCommande(ActionEvent event)
+    {
+
+    	selection.getSelectionModel().select(shop); // direction Commander Voiture
+
+    }
+    @FXML
+    void onVm(ActionEvent event)
+    {
+
+    	selection.getSelectionModel().select(ventte);
+    	System.out.println(selection.getSelectionModel().getSelectedItem());
+
+    }
+
+
+
+
+    
+    
+    
     @FXML
     void onSeoumetV(ActionEvent event)
     {
@@ -458,42 +536,60 @@ public class adminController implements Initializable {
 
 
     @FXML
-    void onSubmit(ActionEvent event) {
-
-    }
-
-    @FXML
-    void onSuivi(ActionEvent event)
+    void onSubmit(ActionEvent event)
     {
-    
-    
-
+    	financeData.getLocalistation(Integer.valueOf(Nsuivi.getText()));
+    	reponse.setText("");
+    	reponse.setText(Localisation);
+    	
+    	
     }
+
+
     
+    /**
+     * button se Deconnecter
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void onLogout(ActionEvent event) throws IOException {
     	
     	Stage thisFenetre = (Stage) logOut.getScene().getWindow();
-    	thisFenetre.close();
+    	
     	Parent authentification = FXMLLoader.load(getClass().getResource("projet Fxml/connexion.fxml"));
-    	Scene fenetre0 = new Scene(authentification);
-    	thisFenetre.setScene(fenetre0);
-    	thisFenetre.setTitle("AUTHENTIFICATION");
-    	thisFenetre.setResizable(false);
-    	thisFenetre.centerOnScreen();
-    	thisFenetre.show();
+    	Stage Fenetre  = new Stage();
+    	
+    	
+    	new Thread(new Runnable(){
+    		public void run() {
+    			try {
+					Thread.sleep(3000);
+    			    Platform.runLater(new Runnable(){
+    				@Override
+    				public void run() {
+    				
+    					thisFenetre.close();
+						Scene fenetre0 = new Scene(authentification);
+						Fenetre.setScene(fenetre0);
+						Fenetre.setTitle("AUTHENTIFICATION");
+						Fenetre.setResizable(false);
+						Fenetre.centerOnScreen();
+						Fenetre.show();
+    			    	
+    				}
+    			});
+    			
+    		} catch (Exception e) {
+				e.printStackTrace();
+			};
+    		
+    		}}).start();
 
     }
 
 
-    @FXML
-	 void onVm(ActionEvent event)
-    {
-    	
-    	selection.getSelectionModel().select(ventte);
-    	System.out.println(selection.getSelectionModel().getSelectedItem());
-    	
-    }
+ 
     @FXML
     void onLanceR(ActionEvent event) 
     {
@@ -523,10 +619,14 @@ public class adminController implements Initializable {
 			financeData.getDataRapport();
 			financeData.getDepVente();
 			financeData.getEmmployeeData();
+			financeData.getAllLocalistation();
 			
 			graphiqueLauch();
 			tableVenteLaunch();
 			tableRhLaunch();
+			tableSuivi();
+			
+	
 			
 			
 			

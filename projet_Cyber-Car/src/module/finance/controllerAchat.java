@@ -15,6 +15,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -22,12 +23,16 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.RadioMenuItem;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import jdbcconnection.financeData;
 
 /**
@@ -64,6 +69,8 @@ public class controllerAchat implements Initializable {
 	int identifiantToyota;
 	int identifiantChevrolet;
 	
+	int idEntrepot;
+	
 	
 	
 	
@@ -98,17 +105,20 @@ public class controllerAchat implements Initializable {
 	
 
 
-	
+	@FXML
+	private BorderPane Border;
+	@FXML
+	private MenuButton entrepot;
 	@FXML
     private RadioMenuItem Plaisance;
 	@FXML
     private RadioMenuItem phoenix;
-
     @FXML
     private RadioMenuItem portLouis;
-    
     @FXML
-    private MenuButton entrepot;
+    private ToggleGroup livre;
+    @FXML
+    private TextField SetEntrepot;
     
     @FXML
     private RadioMenuItem bTombeau;
@@ -236,6 +246,7 @@ public class controllerAchat implements Initializable {
 
     @FXML
     private Button suppTo;
+    
     
 
     /**
@@ -386,23 +397,23 @@ public class controllerAchat implements Initializable {
 		        	
 		        	if(Renaultid.contains(String.valueOf(ValeurPasser.get(i))))	
 		        	{
-		        		financeData.setCommande(ValeurPasser.get(i), RenaultNom.get(Renaultid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), 1);
-		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),1);
+		        		financeData.setCommande(ValeurPasser.get(i), RenaultNom.get(Renaultid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), idEntrepot);
+		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),idEntrepot);
 		        	}
 		        	if(Teslaid.contains(String.valueOf(ValeurPasser.get(i))))
 		        	{
-		        		financeData.setCommande(ValeurPasser.get(i), TeslaNom.get(Teslaid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), 1);
-		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),1);
+		        		financeData.setCommande(ValeurPasser.get(i), TeslaNom.get(Teslaid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), idEntrepot);
+		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),idEntrepot);
 		        	}
 		        	if(chevroletid.contains(String.valueOf(ValeurPasser.get(i))))
 		        	{
-		        		financeData.setCommande(ValeurPasser.get(i), chevroletNom.get(chevroletid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), 1);
-		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),1);
+		        		financeData.setCommande(ValeurPasser.get(i), chevroletNom.get(chevroletid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), idEntrepot);
+		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),idEntrepot);
 		        	}
 		        	if(Toyotaid.contains(String.valueOf(ValeurPasser.get(i))))
 		        	{
-		        		financeData.setCommande(ValeurPasser.get(i), ToyotaNom.get(Toyotaid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)), 1);
-		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),1);
+		        		financeData.setCommande(ValeurPasser.get(i), ToyotaNom.get(Toyotaid.indexOf(String.valueOf(ValeurPasser.get(i)))),Integer.valueOf(totalValue.get(i)),idEntrepot);
+		        		financeData.setUpdateStock(ValeurPasser.get(i),Integer.valueOf(totalValue.get(i)),idEntrepot);
 		        	}
 		        		
 		        	
@@ -1513,17 +1524,24 @@ public class controllerAchat implements Initializable {
     @FXML
     void onVm(ActionEvent event) {
     	
-    	
-		adminController adminController = new adminController();
-		adminController.onVm(event);
+        Parent p = Border.getParent().parentProperty().getValue();
+        TabPane tabPane = (TabPane) p;
+        tabPane.getSelectionModel().select(3);
+		
     	
 
     }
-   
+    Stage fenetre1 ;
     @FXML
-    void onCommande(ActionEvent event) {
+    void onCommande(ActionEvent event)
+    {
 
+    Parent p = Border.getParent().parentProperty().getValue();
+    TabPane tabPane = (TabPane) p;
+    tabPane.getSelectionModel().select(2);
+    	
     }
+    
 
     @FXML
     void onLogout(ActionEvent event) {
@@ -1531,11 +1549,19 @@ public class controllerAchat implements Initializable {
     }
     @FXML
     void onRh(ActionEvent event) {
+    	
+        Parent p = Border.getParent().parentProperty().getValue();
+        TabPane tabPane = (TabPane) p;
+        tabPane.getSelectionModel().select(4);
+        
 
     }
 
     @FXML
     void onSuivi(ActionEvent event) {
+        Parent p = Border.getParent().parentProperty().getValue();
+        TabPane tabPane = (TabPane) p;
+        tabPane.getSelectionModel().select(1);
 
     }
     
@@ -1549,22 +1575,47 @@ public class controllerAchat implements Initializable {
      * 
      */
     @FXML
-    void getByBaie(ActionEvent event) {
+    void getByBaie(ActionEvent event)
+    {
 
+    		this.entrepot.setText(bTombeau.getText());
+    		this.idEntrepot = 4;
+    		SetEntrepot.setText(entrepot.getText());
+    		
+  
     }
 
     @FXML
     void getByPh(ActionEvent event) {
+    	
 
+    		this.entrepot.setText(phoenix.getText());
+    		this.idEntrepot = 3;
+    		SetEntrepot.setText(entrepot.getText());
+  
     }
 
     @FXML
     void getByPlais(ActionEvent event) {
+    	
+
+    		this.entrepot.setText(Plaisance.getText());
+    		idEntrepot = 2;
+    		SetEntrepot.setText(entrepot.getText());
+    		
+
 
     }
 
     @FXML
     void getByPort(ActionEvent event) {
+    	
+
+    		this.entrepot.setText(portLouis.getText());
+    		idEntrepot = 1;
+    		SetEntrepot.setText(entrepot.getText());
+    		
+ 
 
     }
 
@@ -1587,6 +1638,7 @@ public class controllerAchat implements Initializable {
 		
 	try {
 			
+			
 			financeData.getAllVoitureRenault();
 			financeData.getallvoitureTestla();
 			financeData.getallvoitureChevrolet();
@@ -1598,6 +1650,11 @@ public class controllerAchat implements Initializable {
 			suppC.setDisable(true);
 			nbrVoiture.setText("0");
 			total.setText("0");
+			this.entrepot.setText(portLouis.getText());
+			portLouis.setSelected(true);
+			SetEntrepot.setText(entrepot.getText());
+			
+			
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
