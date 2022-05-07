@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
 <TabPane styleClass="fond" stylesheets="@../../finance/projet%20Fxml/css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="module.dsi.dsiController">
    <tabs>
       <Tab text="Tableau de bord">
