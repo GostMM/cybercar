@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/dependence"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaFX"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Java FX"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Dependences"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx.base.jar"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx.media.jar"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx.properties"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx.web.jar"/>
+	<classpathentry kind="lib" path="javafx-sdk/lib/javafx-swt.jar"/>
+	<classpathentry kind="lib" path="librairie/charm-glisten-6.1.0.jar"/>
+	<classpathentry kind="lib" path="librairie/controlsfx-8.40.14.jar"/>
+	<classpathentry kind="lib" path="librairie/jfoenix-9.0.10.jar"/>
+	<classpathentry kind="lib" path="librairie/jfxtras-common-17-r1.jar"/>
+	<classpathentry kind="lib" path="librairie/jfxtras-controls-17-r1.jar"/>
+	<classpathentry kind="lib" path="librairie/jfxtras-fxml-17-r1.jar"/>
+	<classpathentry kind="lib" path="librairie/jmetro-5.2.jar"/>
+	<classpathentry kind="lib" path="librairie/mysql-connector-java-8.0.28.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
