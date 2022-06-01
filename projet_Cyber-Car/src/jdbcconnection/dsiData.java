@@ -4,7 +4,10 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import module.dsi.dsiController;
 
 public class dsiData {
@@ -26,7 +29,10 @@ public class dsiData {
 				
 				dsiController.setName(rs.getString("Nom"));
 				dsiController.setFonction(rs.getString("Fonction"));
-				dsiController.setDate(rs.getString("Date d'embauche"));
+				dsiController.setDate(rs.getString("date_embauche"));
+				dsiController.setId(rs.getString("id"));
+				
+				
 					
 			}
             
@@ -55,7 +61,7 @@ public class dsiData {
 				
 				dsiController.setName(rs.getString("Nom"));
 				dsiController.setFonction(rs.getString("Fonction"));
-				dsiController.setDate(rs.getString("Date d'embauche"));
+				dsiController.setDate(rs.getString("date_embauche"));
 					
 			}
             
@@ -64,6 +70,139 @@ public class dsiData {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
+	}
+	
+	public static void sendDataNewUser(String login, String mdp,int id)
+	{
+		String query = "{ call CreateLogin(?,?,?) }";
+	       
+
+        try {
+        	
+        		Connection conn = ConnectoDataBase.getConnection();
+                CallableStatement stmt = conn.prepareCall(query);
+                stmt.setString(1, login);
+                stmt.setString(2,mdp);
+                stmt.setInt(3,id);
+                
+                stmt.execute();
+                stmt.close();
+        
+        	
+        	}
+        		
+       catch (SQLException ex) {
+    	   
+    	Alert alert = new Alert(AlertType.INFORMATION);
+   		alert.setWidth(600);
+   		alert.setHeight(600);
+   		alert.setTitle("LA COMMANDE");
+   		alert.setHeaderText("etat de la commande");
+   		alert.setContentText("une Erreur s'est produite =>>>"+ex.getMessage());
+   		alert.showAndWait();
+            //System.out.println(ex.getMessage());
+        }
+		
+		
+	}
+	
+	
+	public static boolean VerifysUser(String login ,String mdp)
+	{
+		
+		String query = "{ call ExistUtilisateur(?,?) }";
+		ResultSet rs;
+
+        try {
+        	
+        		Connection conn = ConnectoDataBase.getConnection();
+                CallableStatement stmt = conn.prepareCall(query);
+                stmt.setString(1, login);
+                stmt.setString(2,mdp);
+                rs = stmt.executeQuery();
+                
+                
+                if(rs.getInt("nbrUtilisateur")==1)
+  
+                {
+                	return true;
+                	
+                }
+                
+                
+                else 
+                {
+                	
+                	return false;
+                }
+        
+        	
+        	}
+        
+        catch (SQLException ex) {
+     	   
+        	Alert alert = new Alert(AlertType.INFORMATION);
+       		alert.setWidth(600);
+       		alert.setHeight(600);
+       		alert.setTitle("LA COMMANDE");
+       		alert.setHeaderText("etat de la commande");
+       		alert.setContentText("une Erreur s'est produite =>>>"+ex.getMessage());
+       		alert.showAndWait();
+       		
+       		return false;
+                //System.out.println(ex.getMessage());
+            }
+    		
+        
+		
+		
+		
+	}
+	
+	
+	public static ArrayList<String> UserConnexion(String login)
+	{
+
+		ArrayList<String> userProfile  =  new ArrayList<String>(); 
+		
+		String query = "{ call CompteUtilisateur(?) }";
+		ResultSet rs;
+        try {
+        	
+        		Connection conn = ConnectoDataBase.getConnection();
+                CallableStatement stmt = conn.prepareCall(query);
+                stmt.setString(1, login);
+                rs = stmt.executeQuery();
+                
+                
+                userProfile.add("nom");
+                userProfile.add("prenom");
+                userProfile.add("fonction");
+                
+                
+                
+        	return userProfile;
+        	}
+        
+        catch (SQLException ex) {
+     	   
+        	Alert alert = new Alert(AlertType.INFORMATION);
+       		alert.setWidth(600);
+       		alert.setHeight(600);
+       		alert.setTitle("LA COMMANDE");
+       		alert.setHeaderText("etat de la commande");
+       		alert.setContentText("une Erreur s'est produite =>>>"+ex.getMessage());
+       		alert.showAndWait();
+       		
+       		
+                //System.out.println(ex.getMessage());
+            }
+		
+		
+		
+		
+		return null;
+		
 	}
 
 }

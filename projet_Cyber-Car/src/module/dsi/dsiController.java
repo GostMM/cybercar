@@ -1,13 +1,24 @@
 package module.dsi;
+import java.io.IOException;
+import java.math.BigInteger;
 import java.net.URL;
+import java.security.MessageDigest;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import com.gluonhq.charm.glisten.control.TextField;
+
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 import jdbcconnection.dsiData;
 
 public class dsiController implements Initializable
@@ -17,6 +28,7 @@ public class dsiController implements Initializable
 	private static String Name;
 	private static String Fonction;
 	private static String date ;
+	private static String id;
 	
 	public String getName() {
 		return Name;
@@ -40,6 +52,10 @@ public class dsiController implements Initializable
 
 	public static void setDate(String Date) {
 		date = Date;
+	}
+	
+	public static void setId(String id) {
+		dsiController.id = id;
 	}
 
 	
@@ -79,13 +95,80 @@ public class dsiController implements Initializable
     @FXML
     private TableColumn<?, ?> prenom;
 
+    @FXML
+    private Button logOut;
+    
 
+    @FXML
+    void soumettre(ActionEvent event) 
+    
+    {
+    
+    	String login = identifiant.getText();
+    	String password =  mdp.getText();
+    	
+    	System.out.println(login);
+       userAccount CreationProfile = new userAccount(login,password,id);
+       CreationProfile.CreationIdentifiant();
+
+    }
 
 	 void affichageCreation()
 	 {
          
 	     
 	 }
+	 
+	    /**
+	     * button se Deconnecter
+	     * @param event
+	     * @throws IOException
+	     */
+	    @FXML
+	    void onLogout(ActionEvent event) throws IOException {
+	    	
+	    	Stage thisFenetre = (Stage) logOut.getScene().getWindow();
+	    	
+	    	Parent authentification = FXMLLoader.load(getClass().getResource("projet Fxml/connexion.fxml"));
+	    	Stage Fenetre  = new Stage();
+	    	
+	    	
+	    	new Thread(new Runnable(){
+	    		public void run() {
+	    			try {
+						Thread.sleep(3000);
+	    			    Platform.runLater(new Runnable(){
+	    				@Override
+	    				public void run() {
+	    				
+	    					thisFenetre.close();
+							Scene fenetre0 = new Scene(authentification);
+							Fenetre.setScene(fenetre0);
+							Fenetre.setTitle("AUTHENTIFICATION");
+							Fenetre.setResizable(false);
+							Fenetre.centerOnScreen();
+							Fenetre.show();
+	    			    	
+	    				}
+	    			});
+	    			
+	    		} catch (Exception e) {
+					e.printStackTrace();
+				};
+	    		
+	    		}}).start();
+
+	    }
+	    
+	    
+	    
+	    
+	  
+	    
+	    
+	    
+	    
+	    
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) 
