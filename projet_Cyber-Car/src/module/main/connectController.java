@@ -89,10 +89,7 @@ public class connectController extends Application{
     	     fenetre2.setTitle("Dasboard");
     	     fenetre2.show();
      }
-<<<<<<< HEAD
-=======
-     
->>>>>>> 18b4852 (dsi commit first)
+
      if (role.equals("3")) 
      {
     	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
