@@ -12,121 +12,152 @@
    <tabs>
       <Tab text="Tableau de bord">
          <content>
-            <Pane style="-fx-background-color: linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036)linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036);">
-               <children>
-                  <ImageView fitHeight="1056.0" fitWidth="1920.0" opacity="0.25">
+            <BorderPane>
+               <top>
+                  <ImageView BorderPane.alignment="CENTER">
                      <image>
-                        <Image url="@figma/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg" />
+                        <Image url="@figma/Logo.png" />
                      </image>
+                     <BorderPane.margin>
+                        <Insets bottom="3.0" left="30.0" />
+                     </BorderPane.margin>
                   </ImageView>
-                  <BorderPane>
-                     <top>
-                        <ImageView BorderPane.alignment="CENTER">
+               </top>
+               <left>
+                  <Pane prefHeight="991.0" prefWidth="244.0" styleClass="paneBoard" stylesheets="@../../finance/projet%20Fxml/css/style.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="38.0" layoutY="368.0" stroke="#861313" strokeLineCap="ROUND" strokeWidth="0.0" text="TABLEAU DE BORD" wrappingWidth="168.1199951171875">
+                           <font>
+                              <Font name="Lato Heavy" size="15.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="17.0" layoutY="443.0" prefWidth="200.0" style="-fx-border-color: white;" />
+                        <ImageView layoutX="18.0" layoutY="407.0">
                            <image>
-                              <Image url="@figma/Logo.png" />
+                              <Image url="@figma/icon/24/protocols.png" />
                            </image>
-                           <BorderPane.margin>
-                              <Insets bottom="3.0" left="30.0" />
-                           </BorderPane.margin>
                         </ImageView>
-                     </top>
-                     <left>
-                        <Pane prefHeight="991.0" prefWidth="244.0" styleClass="paneBoard" stylesheets="@../../finance/projet%20Fxml/css/style.css" BorderPane.alignment="CENTER">
-                           <children>
-                              <Text fill="WHITE" fontSmoothingType="LCD" layoutX="38.0" layoutY="368.0" stroke="#861313" strokeLineCap="ROUND" strokeWidth="0.0" text="TABLEAU DE BORD" wrappingWidth="168.1199951171875">
-                                 <font>
-                                    <Font name="Lato Heavy" size="15.0" />
-                                 </font>
-                              </Text>
-                              <Separator layoutX="17.0" layoutY="443.0" prefWidth="200.0" style="-fx-border-color: white;" />
-                              <ImageView layoutX="18.0" layoutY="407.0">
-                                 <image>
-                                    <Image url="@figma/icon/24/protocols.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fill="WHITE" layoutX="72.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
-                                 <font>
-                                    <Font name="Lato Heavy" size="13.0" />
-                                 </font>
-                              </Text>
-                              <Button layoutX="17.0" layoutY="456.0" mnemonicParsing="false" style="-fx-background-color: NONE;" text="Regarder nouvelle liste des empoyés" textFill="WHITE">
-                                 <font>
-                                    <Font name="Lato Heavy" size="13.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                              <Button layoutX="17.0" layoutY="492.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="175.0" style="-fx-background-color: NONE;" text="Creer login et mot de passe" textFill="WHITE">
-                                 <font>
-                                    <Font name="Lato Heavy" size="13.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                              <ImageView layoutX="6.0" layoutY="456.0">
-                                 <image>
-                                    <Image url="@figma/Icon=Subnavigation.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView layoutX="6.0" layoutY="492.0">
-                                 <image>
-                                    <Image url="@figma/Icon=Subnavigation.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView layoutX="95.0" layoutY="68.0">
-                                 <image>
-                                    <Image url="@figma/menu/Vector.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="118.0" fitWidth="121.0" layoutX="51.0" layoutY="36.0">
-                                 <image>
-                                    <Image url="@figma/219986.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fill="WHITE" layoutX="101.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DSI">
-                                 <font>
-                                    <Font name="Hiragino Sans W3" size="19.0" />
-                                 </font>
-                              </Text>
-                              <Text fill="WHITE" layoutX="90.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0">
-                                 <font>
-                                    <Font name="Hiragino Sans W3" size="19.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </Pane>
-                     </left>
-                     <center>
-                        <Pane prefHeight="991.0" prefWidth="1397.0" BorderPane.alignment="CENTER">
-                           <children>
-                              <ImageView layoutX="731.0" layoutY="942.0" preserveRatio="true">
-                                 <image>
-                                    <Image url="@figma/Standard%20Collection%203.png" />
-                                 </image>
-                              </ImageView>
-                              <Text fill="WHITE" layoutX="795.0" layoutY="981.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WOLOZ GROUP BY Cryptosoft">
-                                 <font>
-                                    <Font name="IBM Plex Mono" size="13.0" />
-                                 </font>
-                              </Text>
-                              <Text layoutX="264.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                              <TableView fx:id="dataTable" layoutX="196.0" layoutY="212.0" prefHeight="504.0" prefWidth="809.0">
-                                <columns>
-                                  <TableColumn fx:id="nom" prefWidth="173.3421630859375" text="Nom" />
-                                  <TableColumn fx:id="prenom" prefWidth="161.18414306640625" text="Prénom" />
-                                    <TableColumn fx:id="dateDarrivee" minWidth="3.69000244140625" prefWidth="178.07904052734375" text="Date d'arrivée" />
-                                    <TableColumn fx:id="fonction" prefWidth="148.92095947265625" text="Fonction" />
-                                    <TableColumn fx:id="nouveauAncien" prefWidth="145.731201171875" text="Nouveau/Ancien" />
-                                </columns>
-                              </TableView>
-                           </children>
-                        </Pane>
-                     </center>
-                  </BorderPane>
-               </children>
-            </Pane>
+                        <Text fill="WHITE" layoutX="72.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Action">
+                           <font>
+                              <Font name="Lato Heavy" size="13.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="29.0" layoutY="456.0" mnemonicParsing="false" style="-fx-background-color: NONE;" text="liste des empoyés" textFill="WHITE">
+                           <font>
+                              <Font name="Lato Heavy" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button layoutX="24.0" layoutY="492.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="175.0" style="-fx-background-color: NONE;" text="Creer login et mot de passe" textFill="WHITE">
+                           <font>
+                              <Font name="Lato Heavy" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView layoutX="6.0" layoutY="456.0">
+                           <image>
+                              <Image url="@figma/Icon=Subnavigation.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView layoutX="6.0" layoutY="492.0">
+                           <image>
+                              <Image url="@figma/Icon=Subnavigation.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView layoutX="95.0" layoutY="68.0">
+                           <image>
+                              <Image url="@figma/menu/Vector.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="118.0" fitWidth="121.0" layoutX="51.0" layoutY="36.0">
+                           <image>
+                              <Image url="@figma/219986.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="101.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DSI">
+                           <font>
+                              <Font name="Hiragino Sans W3" size="19.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="90.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                           <font>
+                              <Font name="Hiragino Sans W3" size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </left>
+               <center>
+                  <Pane BorderPane.alignment="CENTER">
+                     <children>
+                        <Text layoutX="264.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+                        <TableView fx:id="dataTable" layoutX="30.0" layoutY="560.0" prefHeight="323.0" prefWidth="941.0">
+                          <columns>
+                            <TableColumn fx:id="nom" prefWidth="173.3421630859375" text="Nom" />
+                            <TableColumn fx:id="prenom" prefWidth="161.18414306640625" text="Prénom" />
+                              <TableColumn fx:id="fonction" prefWidth="148.92095947265625" text="Fonction" />
+                              <TableColumn fx:id="nouveauAncien" prefWidth="145.731201171875" text="Nouveau/Ancien" />
+                              <TableColumn fx:id="dateDarrivee" minWidth="3.69000244140625" prefWidth="178.07904052734375" text="Date d'arrivée" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="dataTable1" layoutX="50.0" layoutY="173.0" prefHeight="323.0" prefWidth="945.0">
+                           <columns>
+                              <TableColumn fx:id="nom1" prefWidth="173.3421630859375" text="Nom" />
+                              <TableColumn fx:id="prenom1" prefWidth="161.18414306640625" text="Prénom" />
+                              <TableColumn fx:id="fonction1" prefWidth="148.92095947265625" text="Fonction" />
+                              <TableColumn fx:id="nouveauAncien1" prefWidth="145.731201171875" text="Nouveau/Ancien" />
+                              <TableColumn fx:id="dateDarrivee1" minWidth="3.69000244140625" prefWidth="178.07904052734375" text="Date d'arrivée" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </center>
+               <right>
+                  <Pane prefHeight="991.0" prefWidth="203.0" styleClass="paniSide">
+                     <children>
+                        <Text fill="WHITE" layoutX="36.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notification" textAlignment="CENTER" wrappingWidth="131.21630859375">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Text>
+                        <TextArea layoutX="10.0" layoutY="144.0" prefHeight="59.0" prefWidth="183.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextArea>
+                        <Text fill="#fffdfd" layoutX="14.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message du RH " />
+                        <TextArea layoutX="11.0" layoutY="242.0" prefHeight="59.0" prefWidth="183.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextArea>
+                        <Text fill="#fffdfd" layoutX="15.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message du RH " />
+                        <TextArea layoutX="12.0" layoutY="350.0" prefHeight="59.0" prefWidth="183.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextArea>
+                        <Text fill="#fffdfd" layoutX="16.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message du RH " />
+                        <TextArea layoutX="13.0" layoutY="454.0" prefHeight="59.0" prefWidth="183.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextArea>
+                        <Text fill="#fffdfd" layoutX="17.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message du RH " />
+                        <TextArea layoutX="12.0" layoutY="570.0" prefHeight="59.0" prefWidth="183.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextArea>
+                        <Text fill="#fffdfd" layoutX="16.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message du RH " />
+                     </children>
+                  </Pane>
+               </right>
+            </BorderPane>
          </content>
       </Tab>
       <Tab text="Création d'identifiant">
@@ -153,7 +184,7 @@
                               <Font name="Lato Heavy" size="13.0" />
                            </font>
                         </Text>
-                        <Button layoutX="25.0" layoutY="456.0" mnemonicParsing="false" style="-fx-background-color: NONE;" text="Regarder nouvelle liste des empoyés" textFill="WHITE">
+                        <Button layoutX="25.0" layoutY="456.0" mnemonicParsing="false" style="-fx-background-color: NONE;" text=" liste des empoyés" textFill="WHITE">
                            <font>
                               <Font name="Lato Heavy" size="13.0" />
                            </font>
@@ -179,12 +210,12 @@
                               <Image url="@figma/Icon=Subnavigation.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="127.0" fitWidth="128.0" layoutX="56.0" layoutY="90.0">
+                        <ImageView fitHeight="127.0" fitWidth="128.0" layoutX="47.0" layoutY="53.0">
                            <image>
                               <Image url="@figma/219986.png" />
                            </image>
                         </ImageView>
-                        <Text fill="WHITE" layoutX="101.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DSI">
+                        <Text fill="WHITE" layoutX="95.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DSI">
                            <font>
                               <Font name="Hiragino Sans W3" size="19.0" />
                            </font>
@@ -222,19 +253,19 @@
                                     <Insets bottom="11.0" right="12.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="fonctions" floatText="Fonction" layoutY="93.0" prefHeight="35.0" prefWidth="468.0">
+                              <TextField fx:id="fonctions" floatText="Fonction" layoutY="96.0" prefHeight="35.0" prefWidth="468.0">
                                  <padding>
                                     <Insets bottom="11.0" right="12.0" />
                                  </padding>
                               </TextField>
                               <Button fx:id="validID" layoutX="143.0" layoutY="384.0" mnemonicParsing="false" onAction="#soumettre" prefHeight="25.0" prefWidth="181.0" styleClass="button1" text="valider " />
-                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Creation de login et Mot de passe " wrappingWidth="457.21630859375">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
                            </children>
                         </Pane>
+                        <Text fill="WHITE" layoutX="607.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creation de login et Mot de passe " wrappingWidth="457.21630859375">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
                      </children>
                   </Pane>
                </center>
