@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import module.dsi.dsiController;
+import module.dsi.userAccount;
 
 public class dsiData {
 	
@@ -122,19 +123,28 @@ public class dsiData {
                 rs = stmt.executeQuery();
                 
                 
-                if(rs.getInt("nbrUtilisateur")==1)
-  
+                if(rs.next() && rs.getInt("nbrUtilisateur")==1)
                 {
-                	return true;
                 	
+                	
+                    	
+                    	userAccount userAccount = new userAccount(null, null, rs.getString("id"));
+    					
+    					
+                    	System.out.println(rs.getString("id"));
+                    	
+                    
+                    
+                	return true;
+                   
                 }
-                
-                
                 else 
                 {
                 	
                 	return false;
                 }
+            	
+                
         
         	
         	}
@@ -160,24 +170,32 @@ public class dsiData {
 	}
 	
 	
-	public static ArrayList<String> UserConnexion(String login)
+	public static ArrayList<String> UserConnexion(String login,int id)
 	{
 
+		System.out.println("here");
 		ArrayList<String> userProfile  =  new ArrayList<String>(); 
 		
-		String query = "{ call CompteUtilisateur(?) }";
+		String query = "{ call CompteUtilisateur(?,?) }";
 		ResultSet rs;
         try {
         	
         		Connection conn = ConnectoDataBase.getConnection();
                 CallableStatement stmt = conn.prepareCall(query);
                 stmt.setString(1, login);
+                stmt.setInt(2, id);
                 rs = stmt.executeQuery();
                 
+                if(rs.next())
+                	
                 
-                userProfile.add("nom");
-                userProfile.add("prenom");
-                userProfile.add("fonction");
+	                userProfile.add(rs.getString("nom"));
+	                userProfile.add(rs.getString("prenom"));
+	                userProfile.add(rs.getString("fonction"));
+                
+                System.out.println(userProfile);
+                
+                
                 
                 
                 

@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import module.dsi.userAccount;
 
 
 public class connectController extends Application{
@@ -62,45 +63,65 @@ public class connectController extends Application{
     @FXML
     void OnConnect(ActionEvent event) throws IOException
     {
-    	String role  = login.getText();
+    	
     
-    if (role.equals("1"))	
-    {
-    	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
-	     fenetre1.close();
-	     Stage fenetre2 = new Stage();
-	     Parent page2  = FXMLLoader.load(getClass().getResource("/module/finance/projet Fxml/dash2.fxml"));
-	     Scene dashboard = new Scene(page2);
-	     fenetre2.setScene(dashboard);
-	     fenetre2.setTitle("Dasboard");
-	     fenetre2.show();
-    }
-	     
+    	String log = login.getText();
      
-     
-     if (role.equals("2")) 
-     {
-    	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
-    	     fenetre1.close();
-    	     Stage fenetre2 = new Stage();
-    	     Parent page2  = FXMLLoader.load(getClass().getResource("/module/rh/projet Fxml/Recrutement3.fxml"));
-    	     Scene dashboard = new Scene(page2);
-    	     fenetre2.setScene(dashboard);
-    	     fenetre2.setTitle("Dasboard");
-    	     fenetre2.show();
-     }
+    	String pass = mdp.getText();
+    	
+    	userAccount Connect = new userAccount(log,pass,null);
+    	
+    	
+    	if(/*Connect.EtablishConnexion()*/ true)
+    	{
+			/* String role = Connect.getRole(); */
+    		
+    		String role = log;
+    		
+    		
+    		 if (role.equals("CFO"))	
+    		    {
+    		    	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
+    			     fenetre1.close();
+    			     Stage fenetre2 = new Stage();
+    			     Parent page2  = FXMLLoader.load(getClass().getResource("/module/finance/projet Fxml/dash2.fxml"));
+    			     Scene dashboard = new Scene(page2);
+    			     fenetre2.setScene(dashboard);
+    			     fenetre2.setTitle("Dasboard");
+    			     fenetre2.show();
+    		    }
+    			     
+    		     
+    		     
+    		     if (role.equals("2")) 
+    		     {
+    		    	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
+    		    	     fenetre1.close();
+    		    	     Stage fenetre2 = new Stage();
+    		    	     Parent page2  = FXMLLoader.load(getClass().getResource("/module/rh/projet Fxml/Recrutement3.fxml"));
+    		    	     Scene dashboard = new Scene(page2);
+    		    	     fenetre2.setScene(dashboard);
+    		    	     fenetre2.setTitle("Dasboard");
+    		    	     fenetre2.show();
+    		     }
 
-     if (role.equals("3")) 
-     {
-    	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
-    	     fenetre1.close();
-    	     Stage fenetre2 = new Stage();
-    	     Parent page2  = FXMLLoader.load(getClass().getResource("/module/dsi/projet Fxml/Page_Principal.fxml"));
-    	     Scene dashboard = new Scene(page2);
-    	     fenetre2.setScene(dashboard);
-    	     fenetre2.setTitle("Dasboard");
-    	     fenetre2.show();
-     }
+    		     if (role.equals("3")) 
+    		     {
+    		    	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
+    		    	     fenetre1.close();
+    		    	     Stage fenetre2 = new Stage();
+    		    	     Parent page2  = FXMLLoader.load(getClass().getResource("/module/dsi/projet Fxml/Page_Principal.fxml"));
+    		    	     Scene dashboard = new Scene(page2);
+    		    	     fenetre2.setScene(dashboard);
+    		    	     fenetre2.setTitle("Dasboard");
+    		    	     fenetre2.show();
+    		     }
+    	}
+    	
+    	
+    	
+    
+   
    
    
     }

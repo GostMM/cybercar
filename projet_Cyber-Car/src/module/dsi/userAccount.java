@@ -14,7 +14,7 @@ public class userAccount
 	private String Role;
 	private String Nom;
 	private String Prenom;
-	private String id ;
+	private static String id ;
 	
 	
 	
@@ -79,7 +79,7 @@ public class userAccount
 	  
 	  
 	  
-	  public boolean EtablishConnexion(String login,String mdp)
+	  public boolean EtablishConnexion()
 	  {
 		
 		  
@@ -87,21 +87,45 @@ public class userAccount
 	  {
 			  
 			  
-			 String passwordHash  = hashPassword(mdp);
-			 boolean verification =  dsiData.VerifysUser(login,passwordHash);
+			 String passwordHash  = hashPassword(this.motDePasse);
+			 System.out.println(this.login);
+			 System.out.println(this.motDePasse);
+			 
+			 
+			 
+			 
+			 boolean verification =  dsiData.VerifysUser(this.login,passwordHash);
+			 
+			 System.out.println(verification);
 			 
 			 
 			 if(verification == true) 
 			 {
+				 System.out.println("herrr");
 				 
-			 ArrayList<String> Profile = dsiData.UserConnexion(login);
-			 
-			 this.Nom = Profile.get(0) ;
-			 this.Prenom = Profile.get(1);
-			 this.Role = Profile.get(2);
-			 
-			 return true ; 
+				 System.out.println(id);
 				 
+				 
+				 
+				 
+				 ArrayList<String> Profile;
+				try {
+					Profile = dsiData.UserConnexion(this.login,Integer.parseInt(id));
+					 System.out.println(Profile);
+					 this.Nom = Profile.get(0) ;
+					 this.Prenom = Profile.get(1);
+					 this.Role = Profile.get(2);
+					 
+					
+					 
+					
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				 
+				 return true ; 
 			 }
 			 
 			 else
@@ -144,6 +168,8 @@ public class userAccount
 		return Nom;
 	}
 
-	
+	public void setId(String id) {
+		this.id = id;
+	}
 
 }
