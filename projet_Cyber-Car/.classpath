@@ -7,7 +7,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Dependences"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Java FX"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/dependence"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAVA FX"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
