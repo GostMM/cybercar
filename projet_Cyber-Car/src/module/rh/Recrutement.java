@@ -1,290 +1,195 @@
 package module.rh;
 
-import com.gluonhq.charm.glisten.control.AutoCompleteTextField;
-import com.gluonhq.charm.glisten.control.TextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.Spinner;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
-import jfxtras.scene.control.LocalDateTimeTextField;
 
 public class Recrutement {
-	
-	String civiliteText;
-    String situationConjugaleText;
-    String allergieText;
-    String assuranceText;
-    String integrationText;
-
-    
-    @FXML
-    private ToggleGroup Civilite;
-    
-    
 
     @FXML
-    private RadioButton Madame;   //------------
+    private TableColumn<?, ?> Dembauche;
 
     @FXML
-    private RadioButton Monsieur; // Declaration
+    private TableColumn<?, ?> DfContrat;
 
     @FXML
-    private ProgressBar ProgressBar;
+    private TextField FonctionProfile;
 
     @FXML
-    private ToggleGroup allergie;
+    private RadioButton Madame;
 
     @FXML
-    private ToggleGroup assuranceMaladie;
+    private RadioButton Monsieur;
 
     @FXML
-    private RadioButton celibataire; //------------
-    
+    private ToggleGroup assurance;
 
     @FXML
-    private AutoCompleteTextField<?> email;
+    private TableColumn<?, ?> civCol;
 
     @FXML
-    private DatePicker embaucheDate;
+    private ToggleGroup civilite;
 
     @FXML
-    private MenuButton entrepots;
+    private ToggleGroup conjugale;
 
     @FXML
-    private TextField indicatif;
+    private Text dConnect;
 
     @FXML
-    private ToggleGroup integration;
+    private DatePicker dEmbauche;
 
     @FXML
-    private Text lastConnexion;
+    private TableColumn<?, ?> fonCol;
 
     @FXML
-    private AutoCompleteTextField<?> lastname;
+    private TextField indic;
 
     @FXML
-    private RadioButton mariee; //----------------
+    private TextField mail;
 
     @FXML
-    private AutoCompleteTextField<?> name;
+    private TableColumn<?, ?> mailCol;
 
     @FXML
-    private AutoCompleteTextField<?> newJob;
+    private ToggleGroup medicale;
 
     @FXML
-    private RadioButton noAllergie;//----------------
+    private TextField motifMedic;
 
     @FXML
-    private RadioButton noAssurance;
+    private TextField nSecuritÃ©;
 
     @FXML
-    private RadioButton noIntegre; //----------------
+    private TextField nbrEnfant;
 
     @FXML
-    private RadioButton noMedical; //----------------
+    private TextField njFille;
 
     @FXML
-    private Text nombreEmployes;
+    private TextField nom;
 
     @FXML
-    private Spinner<?> nombreEnfant;
+    private TableColumn<?, ?> nomCol;
 
     @FXML
-    private AutoCompleteTextField<?> numeroSocial;
+    private TextField nomProfile;
 
     @FXML
-    private AutoCompleteTextField<?> oldJob;
+    private TextField postA;
 
     @FXML
-    private AutoCompleteTextField<?> otherMedical;
+    private TextField postN;
 
     @FXML
-    private AutoCompleteTextField<?> otherSituation;
+    private TableColumn<?, ?> prenCol;
 
     @FXML
-    private LocalDateTimeTextField rdvEntretien;
+    private TextField prenom;
 
     @FXML
-    private Spinner<?> salaire;
+    private TextField prenomProfile;
 
     @FXML
-    private MenuButton service;
+    private RadioButton profilCMme;
 
     @FXML
-    private ToggleGroup situationConjugale;
-    
-    @FXML
-    private RadioButton autreSituationConjugale;
+    private RadioButton profilCMr;
 
     @FXML
-    private Button submitDmUserCompte;
+    private ToggleGroup profile;
 
     @FXML
-    private Button submitIntegre;
+    private TextField salaire;
 
     @FXML
-    private Button submitRdv;
+    private TextField salaireProfile;
 
     @FXML
-    private ToggleGroup suiviMedical;
+    private Button soumetre;
+
+    @FXML
+    private Tab tabBoard;
+
+    @FXML
+    private Tab tabProfile;
+
+    @FXML
+    private TableView<?> tableData;
 
     @FXML
     private TextField tel;
 
     @FXML
+    private TableColumn<?, ?> telCol;
+
+    @FXML
     private Text userName;
 
     @FXML
-    private RadioButton yesAllergie; //----------------
+    private Text userName1;
 
     @FXML
-    private RadioButton yesAssurance; //----------------
-
-    @FXML
-    private RadioButton yesIntegre;//----------------
-
-    @FXML
-    private RadioButton yesMedical; //----------------
-
-    @FXML
-    void BtnCelib(ActionEvent event) {
-    	
-    	if (celibataire.isSelected()) {
-    		otherSituation.setDisable(true);
-    		situationConjugaleText = "Celibataire";	
-    		
-    	}
+    void BntMrSelected(ActionEvent event) {
 
     }
 
     @FXML
-    void BtnMarie(ActionEvent event) {
-    	if (mariee.isSelected()) {
-    		otherSituation.setDisable(true);
-    		situationConjugaleText = "Marié(e)";	
-    		
-    	}
-    }
-    
-    
-    @FXML
-    void BtnAutreSituationConjugale(ActionEvent event) {
-    	
-    	if (autreSituationConjugale.isSelected()) {
-    		situationConjugaleText = otherSituation.getText();	
-    		
-    	}
-
-    }
-//<!--------------------------------------------------------------------------->
-    @FXML
-    void BtnMr(ActionEvent event) {
-    	
-    	if (Monsieur.isSelected()) {
-    		civiliteText = "Monsieur";	
-    		
-    	}
+    void BtnMmeSelected(ActionEvent event) {
 
     }
 
     @FXML
-    void BtnMrs(ActionEvent event) {
-    	if (Madame.isSelected()) {
-    		civiliteText = "Madame";	
-    		
-    	}
-
-    }
-
-    
-  //------------Medical
-    
-    @FXML
-    void BtnYesMediccal(ActionEvent event) {
-    	if (yesMedical.isSelected()) {
-    		civiliteText = "Suivie Médical";	
-    		
-    	}
-    	
+    void MarieSelect(ActionEvent event) {
 
     }
 
     @FXML
-    void BtnNoMedical(ActionEvent event) {
-
-    	if (noMedical.isSelected()) {
-    		civiliteText = " Sans Suivie Médical";	
-    		
-    	}
-    }
-    
-  //------------
-
-    @FXML
-    void BtnYesAllergie(ActionEvent event) {
-    	if (yesAllergie.isSelected()) {
-    		allergieText = " Allergique :";	
-    		
-    	}
-    	
-
-    }
-    
-    @FXML
-    void BtnNoAllergie(ActionEvent event) {
-    	
-    	if (noAllergie.isSelected()) {
-    		allergieText = " Non Allergique";	
-    		
-    	}
+    void celibSelect(ActionEvent event) {
 
     }
 
     @FXML
-    void BtnYesAssurance(ActionEvent event) {
-    	
-    	if (yesAssurance.isSelected()) {
-    		assuranceText = " Assuré(e)";	
-    		
-    	}
+    void noAssurance(ActionEvent event) {
 
-    }
-    
-    @FXML
-    void BtnNoAssurance(ActionEvent event) {
-    	
-    	if (yesAllergie.isSelected()) {
-    		assuranceText = "Non Assuré(e)";	
-    		
-    	}
     }
 
     @FXML
-    void BtnYesIntegration(ActionEvent event) {
-    	
-    	if (yesIntegre.isSelected()) {
-    		integrationText = "Ingration accépté";	
-    		
-    	}
+    void noMedical(ActionEvent event) {
 
     }
-    
+
     @FXML
-    void BtnNoIntegration(ActionEvent event) {
-    	if (noIntegre.isSelected()) {
-    		integrationText = "Ingration refusé";	
-    		
-    	}
-
+    void onProfile(ActionEvent event) {
 
     }
 
-    
+    @FXML
+    void onRecrute(ActionEvent event) {
+
+    }
+
+    @FXML
+    void onSoumet(ActionEvent event) {
+
+    }
+
+    @FXML
+    void yesAssurance(ActionEvent event) {
+
+    }
+
+    @FXML
+    void yesMedical(ActionEvent event) {
+
+    }
 
 }
