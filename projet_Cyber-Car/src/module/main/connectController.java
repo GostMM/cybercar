@@ -93,7 +93,7 @@ public class connectController extends Application{
     			     
     		     
     		     
-    		     if (role.equals("2")) 
+    		     if (role.equals("RH")) 
     		     {
     		    	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
     		    	     fenetre1.close();
@@ -105,7 +105,20 @@ public class connectController extends Application{
     		    	     fenetre2.show();
     		     }
 
-    		     if (role.equals("3")) 
+    		     if (role.equals("DSI")) 
+    		     {
+    		    	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
+    		    	     fenetre1.close();
+    		    	     Stage fenetre2 = new Stage();
+    		    	     Parent page2  = FXMLLoader.load(getClass().getResource("/module/dsi/projet Fxml/Page_Principal.fxml"));
+    		    	     Scene dashboard = new Scene(page2);
+    		    	     fenetre2.setScene(dashboard);
+    		    	     fenetre2.setTitle("Dasboard");
+    		    	     fenetre2.show();
+    		     }
+    		     
+    		     
+    		     if (role.equals("VENTE")) 
     		     {
     		    	 	 Stage fenetre1 = (Stage) connect.getScene().getWindow();
     		    	     fenetre1.close();

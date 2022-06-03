@@ -76,17 +76,27 @@ public class dsiData {
 	public static void sendDataNewUser(String login, String mdp,int id)
 	{
 		String query = "{ call CreateLogin(?,?,?) }";
+		
+		String query2  = "{ call isLog(?) }";
 	       
 
         try {
         	
         		Connection conn = ConnectoDataBase.getConnection();
                 CallableStatement stmt = conn.prepareCall(query);
+              
+                
                 stmt.setString(1, login);
                 stmt.setString(2,mdp);
                 stmt.setInt(3,id);
                 
                 stmt.execute();
+                stmt.close();
+                
+                
+                CallableStatement stmt2  = conn.prepareCall(query2);
+                stmt2.setInt(1, id);
+                stmt2.execute();
                 stmt.close();
         
         	
