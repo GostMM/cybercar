@@ -6,6 +6,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?import com.gluonhq.charm.glisten.control.TextField ?>
 
 <TabPane style="-fx-background-color: linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036)linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036) linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036)linear-gradient(to right, rgb(1,8,45), #00051e, rgb(21,110,139) , #320036);" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="module.rh.Recrutement">
    <tabs>
