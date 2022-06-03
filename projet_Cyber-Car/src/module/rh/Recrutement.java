@@ -7,20 +7,45 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
+import jfxtras.scene.control.LocalDateTimeTextField;
 
 public class Recrutement {
+	
+	String civiliteText;
+    String situationConjugaleText;
+    String allergieText;
+    String assuranceText;
+    String integrationText;
+
+    
+    @FXML
+    private ToggleGroup Civilite;
+    
+    
 
     @FXML
-    private RadioButton Madame;
+    private RadioButton Madame;   //------------
 
     @FXML
-    private RadioButton Monsieur;
+    private RadioButton Monsieur; // Declaration
 
     @FXML
-    private RadioButton celibataire;
+    private ProgressBar ProgressBar;
+
+    @FXML
+    private ToggleGroup allergie;
+
+    @FXML
+    private ToggleGroup assuranceMaladie;
+
+    @FXML
+    private RadioButton celibataire; //------------
+    
 
     @FXML
     private AutoCompleteTextField<?> email;
@@ -35,34 +60,34 @@ public class Recrutement {
     private TextField indicatif;
 
     @FXML
+    private ToggleGroup integration;
+
+    @FXML
     private Text lastConnexion;
 
     @FXML
     private AutoCompleteTextField<?> lastname;
 
     @FXML
-    private RadioButton mariee;
+    private RadioButton mariee; //----------------
 
     @FXML
     private AutoCompleteTextField<?> name;
 
     @FXML
-    private AutoCompleteTextField<?> nameGirl;
-
-    @FXML
     private AutoCompleteTextField<?> newJob;
 
     @FXML
-    private RadioButton noAllergie;
+    private RadioButton noAllergie;//----------------
 
     @FXML
     private RadioButton noAssurance;
 
     @FXML
-    private RadioButton noIntegre;
+    private RadioButton noIntegre; //----------------
 
     @FXML
-    private RadioButton noMedical;
+    private RadioButton noMedical; //----------------
 
     @FXML
     private Text nombreEmployes;
@@ -83,10 +108,19 @@ public class Recrutement {
     private AutoCompleteTextField<?> otherSituation;
 
     @FXML
+    private LocalDateTimeTextField rdvEntretien;
+
+    @FXML
     private Spinner<?> salaire;
 
     @FXML
     private MenuButton service;
+
+    @FXML
+    private ToggleGroup situationConjugale;
+    
+    @FXML
+    private RadioButton autreSituationConjugale;
 
     @FXML
     private Button submitDmUserCompte;
@@ -98,41 +132,159 @@ public class Recrutement {
     private Button submitRdv;
 
     @FXML
+    private ToggleGroup suiviMedical;
+
+    @FXML
     private TextField tel;
 
     @FXML
     private Text userName;
 
     @FXML
-    private RadioButton yesAllergie;
+    private RadioButton yesAllergie; //----------------
 
     @FXML
-    private RadioButton yesAssurance;
+    private RadioButton yesAssurance; //----------------
 
     @FXML
-    private RadioButton yesIntegre;
+    private RadioButton yesIntegre;//----------------
 
     @FXML
-    private RadioButton yesMedical;
+    private RadioButton yesMedical; //----------------
 
     @FXML
-    void BntMrSelected(ActionEvent event) {
+    void BtnCelib(ActionEvent event) {
+    	
+    	if (celibataire.isSelected()) {
+    		otherSituation.setDisable(true);
+    		situationConjugaleText = "Celibataire";	
+    		
+    	}
 
     }
 
     @FXML
-    void BtnMmeSelected(ActionEvent event) {
+    void BtnMarie(ActionEvent event) {
+    	if (mariee.isSelected()) {
+    		otherSituation.setDisable(true);
+    		situationConjugaleText = "Marié(e)";	
+    		
+    	}
+    }
+    
+    
+    @FXML
+    void BtnAutreSituationConjugale(ActionEvent event) {
+    	
+    	if (autreSituationConjugale.isSelected()) {
+    		situationConjugaleText = otherSituation.getText();	
+    		
+    	}
+
+    }
+//<!--------------------------------------------------------------------------->
+    @FXML
+    void BtnMr(ActionEvent event) {
+    	
+    	if (Monsieur.isSelected()) {
+    		civiliteText = "Monsieur";	
+    		
+    	}
 
     }
 
     @FXML
-    void SuiviMedicalNon(ActionEvent event) {
+    void BtnMrs(ActionEvent event) {
+    	if (Madame.isSelected()) {
+    		civiliteText = "Madame";	
+    		
+    	}
+
+    }
+
+    
+  //------------Medical
+    
+    @FXML
+    void BtnYesMediccal(ActionEvent event) {
+    	if (yesMedical.isSelected()) {
+    		civiliteText = "Suivie Médical";	
+    		
+    	}
+    	
 
     }
 
     @FXML
-    void SuiviMedicalOui(ActionEvent event) {
+    void BtnNoMedical(ActionEvent event) {
+
+    	if (noMedical.isSelected()) {
+    		civiliteText = " Sans Suivie Médical";	
+    		
+    	}
+    }
+    
+  //------------
+
+    @FXML
+    void BtnYesAllergie(ActionEvent event) {
+    	if (yesAllergie.isSelected()) {
+    		allergieText = " Allergique :";	
+    		
+    	}
+    	
 
     }
+    
+    @FXML
+    void BtnNoAllergie(ActionEvent event) {
+    	
+    	if (noAllergie.isSelected()) {
+    		allergieText = " Non Allergique";	
+    		
+    	}
+
+    }
+
+    @FXML
+    void BtnYesAssurance(ActionEvent event) {
+    	
+    	if (yesAssurance.isSelected()) {
+    		assuranceText = " Assuré(e)";	
+    		
+    	}
+
+    }
+    
+    @FXML
+    void BtnNoAssurance(ActionEvent event) {
+    	
+    	if (yesAllergie.isSelected()) {
+    		assuranceText = "Non Assuré(e)";	
+    		
+    	}
+    }
+
+    @FXML
+    void BtnYesIntegration(ActionEvent event) {
+    	
+    	if (yesIntegre.isSelected()) {
+    		integrationText = "Ingration accépté";	
+    		
+    	}
+
+    }
+    
+    @FXML
+    void BtnNoIntegration(ActionEvent event) {
+    	if (noIntegre.isSelected()) {
+    		integrationText = "Ingration refusé";	
+    		
+    	}
+
+
+    }
+
+    
 
 }
