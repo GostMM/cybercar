@@ -18,12 +18,17 @@ public class ConnectoDataBase
 	{
 
 		Connection conn = null;
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/Cybercar","root","root");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/cybercar","root","root");
 		System.out.print("vous etes connectez ");
 		return conn;
 
 	}
 	
+<<<<<<< Updated upstream
+=======
+	 
+	 
+>>>>>>> Stashed changes
 }
 
 	
