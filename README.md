@@ -68,7 +68,7 @@
 >>>>>> et faite finish 
 
 
-#### Faites exactement pareil  pour le dossier librairie  <strong>/projet_Cyber-Car//strong> 
+#### Faites exactement pareil  pour le dossier librairie  <strong>/projet_Cyber-Car/librairie 
   - vous creer la librairie et vous l'ajouter dans le classpath 
 
  
