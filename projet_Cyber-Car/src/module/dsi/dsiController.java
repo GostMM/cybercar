@@ -4,11 +4,14 @@ import java.math.BigInteger;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import com.gluonhq.charm.glisten.control.TextField;
 
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,45 +21,36 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import jdbcconnection.dsiData;
+import module.finance.Profiles;
+import module.finance.Vente;
 
 public class dsiController implements Initializable
 {
 
 
-	private static String Name;
-	private static String Fonction;
-	private static String date ;
-	private static String id;
+	public static ArrayList<String> Name = new ArrayList<String>();
+	public static ArrayList<String> Fonction = new ArrayList<String>();
+	public static ArrayList<String> date = new ArrayList<String>() ;
+	public static ArrayList<String> id = new ArrayList<String>() ;
+	public static ArrayList<String> log = new ArrayList<String>() ;
 	
-	public String getName() {
-		return Name;
-	}
-
-	public static void setName(String name) {
-		Name = name;
-	}
-
-	public String getFonction() {
-		return Fonction;
-	}
-
-	public static void setFonction(String fonction) {
-		Fonction = fonction;
-	}
-
-	public String getDate() {
-		return date;
-	}
-
-	public static void setDate(String Date) {
-		date = Date;
-	}
 	
-	public static void setId(String id) {
-		dsiController.id = id;
-	}
+	
+	
+	
+	public static ArrayList<String> Name1 = new ArrayList<String>();
+	public static ArrayList<String> Fonction1 = new ArrayList<String>();
+	public static ArrayList<String> date1 = new ArrayList<String>() ;
+	public static ArrayList<String> id1 = new ArrayList<String>() ;
+	public static ArrayList<String> log1 = new ArrayList<String>() ;
+	
+	
+	
+	
+	
 
 	
 	
@@ -66,16 +60,25 @@ public class dsiController implements Initializable
     private TextField Noms;
  
     @FXML
-    private TableView<?> dataTable;
+    private TableView<TableUser> dataTable;
+    
+    @FXML
+    private TableView<TableUser> dataTable1;
+
 
     @FXML
-    private TableColumn<?, ?> dateDarrivee;
+    private TableColumn<TableUser, String> dateDarrivee;
+    
+    @FXML
+    private TableColumn<TableUser, String> dateDarrivee1;
 
     @FXML
     private TextField datedembauche;
 
     @FXML
-    private TableColumn<?, ?> fonction;
+    private TableColumn<TableUser, String> fonction;
+    @FXML
+    private TableColumn<TableUser, String> fonction1;
 
     @FXML
     private TextField fonctions;
@@ -87,37 +90,173 @@ public class dsiController implements Initializable
     private TextField mdp;
 
     @FXML
-    private TableColumn<?, ?> nom;
+    private TableColumn<TableUser, String> nom;
+    
+    @FXML
+    private TableColumn<TableUser, String> nom1;
 
     @FXML
-    private TableColumn<?, ?> nouveauAncien;
+    private TableColumn<TableUser, String> nouveauAncien;
+    
+    @FXML
+    private TableColumn<TableUser, String> nouveauAncien1;
 
     @FXML
-    private TableColumn<?, ?> prenom;
+    private TableColumn<TableUser, String> prenom;
+    @FXML
+    private TableColumn<TableUser, String> prenom1;
 
     @FXML
     private Button logOut;
     
 
+    int compteur = 0;
+    
     @FXML
-    void soumettre(ActionEvent event) 
+    void onNext(ActionEvent event) 
     
     {
-    
-    	String login = identifiant.getText();
-    	String password =  mdp.getText();
+    	compteur++;
     	
-    	System.out.println(login);
-       userAccount CreationProfile = new userAccount(login,password,id);
-       CreationProfile.CreationIdentifiant();
+    	
+    	
+    	
+    	
+    	
+    	if(Name.size()-1>=compteur)
+	       
+    		{
+    		
+    		
+    		
+    		Noms.setText(Name.get(compteur));
+    		fonctions.setText(Fonction.get(compteur));
+	        datedembauche.setText(date.get(compteur));
+	        
+	        
+    		}
+    	
+    	if(compteur > Name.size()-1)
+    	{
+    		compteur = -1;
+    	}
+    	
+    	
+    	
+    	
+	       
+	    	
 
     }
 
-	 void affichageCreation()
+    
+    @FXML
+    void onPrev(ActionEvent event)
+    {
+
+    	
+    }
+    @FXML
+    void soumettre(ActionEvent event) throws SQLException 
+    
+    {
+    
+       String login = identifiant.getText();
+       String password =  mdp.getText();
+       System.out.println(login);
+       userAccount CreationProfile = new userAccount(login,password,id.get(compteur));
+       CreationProfile.CreationIdentifiant();
+       
+       
+       
+       Name.clear();
+       Fonction.clear();
+       date.clear();
+       id.clear();
+       log.clear();
+       
+       
+       Name1.clear();
+       Fonction1.clear();
+       date1.clear();
+       id1.clear();
+       log1.clear();
+       
+       
+       dsiData.getDernierEmployee();
+       dsiData.getSecondEmployee();
+       affichageTables();
+       if (!Name.isEmpty())
+       {
+
+           Noms.setText(Name.get(0));
+           fonctions.setText(Fonction.get(0));
+           datedembauche.setText(date.get(0));
+           
+    	   
+       }
+       else
+       {
+    	   
+    	   Noms.setText("vide()");
+           fonctions.setText("vide()");
+           datedembauche.setText("vide()");
+           
+    	   
+       }
+    	   
+      
+       
+       
+       
+
+    }
+
+	 void affichageTables()
 	 {
+		 
+		 
+		 ObservableList<TableUser>data1 = FXCollections.observableArrayList();
+		 ObservableList<TableUser>data2 = FXCollections.observableArrayList();
+		 
+		 
+		 for(int i = 0;i<Fonction.size();i++)
+		 {
+			 data1.add(new TableUser(Name.get(i),Fonction.get(i),log.get(i),date.get(i)));
+			
+		 }
+		 for(int i = 0;i<Fonction1.size();i++)
+		 {
+			 data2.add(new TableUser(Name1.get(i),Fonction1.get(i),log1.get(i),date1.get(i)));
+		 }
+		 
+		
+		 
+		 nom.setCellValueFactory(new PropertyValueFactory<TableUser, String>("nom") );
+		 fonction.setCellValueFactory(new PropertyValueFactory<TableUser, String>("fonction"));
+		 dateDarrivee.setCellValueFactory(new PropertyValueFactory<TableUser, String>("date_arivee"));
+		 nouveauAncien.setCellValueFactory(new PropertyValueFactory<TableUser, String>("status_Log"));
+		 
+		 
+		 nom1.setCellValueFactory(new PropertyValueFactory<TableUser, String>("nom") );
+		 fonction1.setCellValueFactory(new PropertyValueFactory<TableUser, String>("fonction"));
+		 dateDarrivee1.setCellValueFactory(new PropertyValueFactory<TableUser, String>("date_arivee"));
+		 nouveauAncien1.setCellValueFactory(new PropertyValueFactory<TableUser, String>("status_Log"));
+		 
+		 
+		 
+		 dataTable.setItems(data2);
+		 dataTable1.setItems(data1);
+		 
+		 
+		 
          
+		 
 	     
 	 }
+	 
+	 
+	 
 	 
 	    /**
 	     * button se Deconnecter
@@ -178,23 +317,28 @@ public class dsiController implements Initializable
 		try {
             
             dsiData.getDernierEmployee();
-            Noms.setText(Name);
-            fonctions.setText(Fonction);
-            datedembauche.setText(date);
+            dsiData.getSecondEmployee();
+            affichageTables();
+            
+           
+            
+            if(!Name.isEmpty())
+            {
+            	
+            
+            Noms.setText(Name.get(0));
+            fonctions.setText(Fonction.get(0));
+            datedembauche.setText(date.get(0));
+            
+            }
+            
+           
 		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			
-			try {
-				dsiData.getSecondEmployee();
-			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			Noms.setText(Name); 
-			fonctions.setText(Fonction);
-			datedembauche.setText(date);
+		
 			
 		}	
 	}

@@ -4,6 +4,50 @@
 .default-color2.chart-pie { -fx-pie-color: #860061; }
 .default-color3.chart-pie { -fx-pie-color: #adff2f; }
 .default-color4.chart-pie { -fx-pie-color: #ff5700; }
+
+
+
+
+.button-suivant
+{
+    -fx-background-color: yellow;
+    -fx-border-color: white;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+
+}
+
+
+.button-precedent
+{
+    -fx-background-color: rgb(57, 255, 245);
+    -fx-border-color: white;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+
+}
+
+
+.button-precedent :pressed 
+{	
+
+   -fx-background-color: rgba(255, 255, 255, 0.596);
+
+}
+
+.button-suivant:pressed
+{	
+ -fx-background-color: rgba(255, 255, 255, 0.596);
+}
+
+
+.container
+{
+    -fx-background-color: rgba(52, 47, 47, 0.448);
+    -fx-border-color: white;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
  
 .chart-pie-label-line {
     -fx-stroke: #d1c6c6;
