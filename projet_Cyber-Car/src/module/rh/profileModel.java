@@ -5,31 +5,37 @@ import jdbcconnection.rhData;
 public class profileModel 
 {
 	
-	private String 
-	nom,
-	prenom,
-	nJeuneFille,
-	civilite,
-	fonction,
-	mail,
-	tel,
-	indic,
-	dEmbauche,
-	dFinContrat,
-	postA,
-	postN,
-	conjugale,
-	nbrEnfant,
-	adresse,
-	medicale,
-	assurance,
-	salaire;
+	
 
+
+
+	private Integer id;
 	
+	private String 
+					nom,
+					prenom,
+					nJeuneFille,
+					civilite,
+					fonction,
+					mail,
+					tel,
+					indic,
+					dEmbauche,
+					dFinContrat,
+					postA,
+					postN,
+					conjugale,
+					nbrEnfant,
+					adresse,
+					medicale,
+					assurance,
+					salaire;
 	
-	public profileModel(String nom, String prenom, String nJeuneFille, String civilite, String fonction, String mail,String adresse,
+	public profileModel(String nom,
+			String prenom, String nJeuneFille, String civilite, String fonction, String mail,
 			String tel, String indic, String dEmbauche, String dFinContrat, String postA, String postN,
-			String conjugale, String nbrEnfant, String medicale, String assurance, String salaire) {
+			String conjugale, String nbrEnfant, String adresse, String medicale, String assurance, String salaire,
+			Integer id) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
@@ -45,101 +51,20 @@ public class profileModel
 		this.postN = postN;
 		this.conjugale = conjugale;
 		this.nbrEnfant = nbrEnfant;
+		this.adresse = adresse;
 		this.medicale = medicale;
 		this.assurance = assurance;
 		this.salaire = salaire;
-		this.adresse = adresse;
+		this.id = id;
 	}
-	
+
 	
 	public String getNom() {
 		return nom;
 	}
 
 
-	public String getPrenom() {
-		return prenom;
-	}
 
-
-	public String getnJeuneFille() {
-		return nJeuneFille;
-	}
-
-
-	public String getCivilite() {
-		return civilite;
-	}
-
-
-	public String getFonction() {
-		return fonction;
-	}
-
-
-	public String getMail() {
-		return mail;
-	}
-
-
-	public String getTel() {
-		return tel;
-	}
-
-
-	public String getIndic() {
-		return indic;
-	}
-
-
-	public String getdEmbauche() {
-		return dEmbauche;
-	}
-
-
-	public String getdFinContrat() {
-		return dFinContrat;
-	}
-
-
-	public String getPostA() {
-		return postA;
-	}
-
-
-	public String getPostN() {
-		return postN;
-	}
-
-
-	public String getConjugale() {
-		return conjugale;
-	}
-
-
-	public String getNbrEnfant() {
-		return nbrEnfant;
-	}
-
-
-	public String getAdresse() {
-		return adresse;
-	}
-
-
-	public String getMedicale() {
-		return medicale;
-	}
-
-
-	public String getAssurance() {
-		return assurance;
-	}
-
-
-	public String getSalaire() {
-		return salaire;
-	}
 
 
 	public void setNom(String nom) {
@@ -147,9 +72,31 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+
+
+
+
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
+
+
+
+
+
+	public String getnJeuneFille() {
+		return nJeuneFille;
+	}
+
+
+
 
 
 	public void setnJeuneFille(String nJeuneFille) {
@@ -157,9 +104,31 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getCivilite() {
+		return civilite;
+	}
+
+
+
+
+
 	public void setCivilite(String civilite) {
 		this.civilite = civilite;
 	}
+
+
+
+
+
+	public String getFonction() {
+		return fonction;
+	}
+
+
+
 
 
 	public void setFonction(String fonction) {
@@ -167,9 +136,31 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getMail() {
+		return mail;
+	}
+
+
+
+
+
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
+
+
+
+
+
+	public String getTel() {
+		return tel;
+	}
+
+
+
 
 
 	public void setTel(String tel) {
@@ -177,9 +168,31 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getIndic() {
+		return indic;
+	}
+
+
+
+
+
 	public void setIndic(String indic) {
 		this.indic = indic;
 	}
+
+
+
+
+
+	public String getdEmbauche() {
+		return dEmbauche;
+	}
+
+
+
 
 
 	public void setdEmbauche(String dEmbauche) {
@@ -187,9 +200,31 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getdFinContrat() {
+		return dFinContrat;
+	}
+
+
+
+
+
 	public void setdFinContrat(String dFinContrat) {
 		this.dFinContrat = dFinContrat;
 	}
+
+
+
+
+
+	public String getPostA() {
+		return postA;
+	}
+
+
+
 
 
 	public void setPostA(String postA) {
@@ -197,9 +232,31 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getPostN() {
+		return postN;
+	}
+
+
+
+
+
 	public void setPostN(String postN) {
 		this.postN = postN;
 	}
+
+
+
+
+
+	public String getConjugale() {
+		return conjugale;
+	}
+
+
+
 
 
 	public void setConjugale(String conjugale) {
@@ -207,9 +264,31 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getNbrEnfant() {
+		return nbrEnfant;
+	}
+
+
+
+
+
 	public void setNbrEnfant(String nbrEnfant) {
 		this.nbrEnfant = nbrEnfant;
 	}
+
+
+
+
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+
+
 
 
 	public void setAdresse(String adresse) {
@@ -217,9 +296,31 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getMedicale() {
+		return medicale;
+	}
+
+
+
+
+
 	public void setMedicale(String medicale) {
 		this.medicale = medicale;
 	}
+
+
+
+
+
+	public String getAssurance() {
+		return assurance;
+	}
+
+
+
 
 
 	public void setAssurance(String assurance) {
@@ -227,9 +328,45 @@ public class profileModel
 	}
 
 
+
+
+
+	public String getSalaire() {
+		return salaire;
+	}
+
+
+
+
+
 	public void setSalaire(String salaire) {
 		this.salaire = salaire;
 	}
+
+
+
+
+
+	public Integer getId() {
+		return id;
+	}
+
+
+
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
+
+
+
+	
+	
+	
+	
 
 
 	public boolean CreeProfile()
@@ -248,6 +385,9 @@ public class profileModel
 		}
 		
 		
+	}
+		
+			
 		
 		
 		
@@ -261,4 +401,4 @@ public class profileModel
 	
 	
 
-}
+

@@ -80,7 +80,7 @@ public class rhData
 	public static void getallUsers()
 	{
 		
-		
+
 		
 		
 		
@@ -98,10 +98,13 @@ public class rhData
 	            	Recrutement.prenoms.add(rs.getString("prenom"));
 	            	Recrutement.civilites.add(rs.getString("civilite"));
 	            	Recrutement.fonctions.add(rs.getString("fonction"));
+	            	Recrutement.adrsPostale.add(rs.getString("adresse"));
 	            	Recrutement.emails.add(rs.getString("email"));
 	            	Recrutement.tels.add(rs.getString("tel"));
 	            	Recrutement.dEmbauches.add(rs.getString("date_embauche"));
 	            	Recrutement.dFinContrat.add(rs.getString("date_fin_de_contrat"));
+	            	Recrutement.id.add(rs.getInt("id"));
+	            	Recrutement.uSalaire.add(rs.getString("salaire"));
 	            	
 	            	
 	            
