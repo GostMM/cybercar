@@ -277,6 +277,7 @@ public class controllerAchat implements Initializable {
 		
 	
 		
+		
 		TableView<panierData> table = new TableView<panierData>();
 		TableColumn<panierData,String> nameCar = new TableColumn<panierData,String>("Nom de la voiture");
         TableColumn<panierData,String> quantity = new TableColumn<panierData,String>("Quantité");
@@ -308,9 +309,7 @@ public class controllerAchat implements Initializable {
             			  {
             				  
             				  comtpteur++;
-            				  
-
-            				
+            				  		
             			  }}
             		  
             	
@@ -318,13 +317,17 @@ public class controllerAchat implements Initializable {
        
     		// ajouter dans arrayList les valeurs compter 
         	totalValue.add(comtpteur);
-        	System.out.println("ici"+comtpteur);
+        	//System.out.println("ici"+comtpteur);
     		ValeurPasser.add(quantite.get(i));
-    		System.out.println("valeur : ===>"+ValeurPasser+ "total ===>"+totalValue);
+    		//System.out.println("valeur : ===>"+ValeurPasser+ "total ===>"+totalValue);
         	
         	comtpteur = 0;
         
         }
+        	
+        	
+        	
+        	
         }
         // aéffichage sur le tableview
         for(int i =0;i<ValeurPasser.size();i++)
@@ -1457,10 +1460,10 @@ public class controllerAchat implements Initializable {
 					total.setText(String.valueOf(PrixTotal));
 					
 					
-			    	System.out.println(indexTo+"  ---->"+quantite+"size ---->"+quantite.size());
+			    	//System.out.println(indexTo+"  ---->"+quantite+"size ---->"+quantite.size());
 			    	if (!quantite.contains(identifiantToyota))
 			    	{
-			    		System.out.println("c'est ici que ça se passe"+quantite.size());
+			    		//System.out.println("c'est ici que ça se passe"+quantite.size());
 			    		  nbrTo.setText("0");
 			    		  suppTo.setDisable(true);
 			    		  nbrVoiture.setText(String.valueOf(quantite.size()));

@@ -108,7 +108,7 @@ public class Recrutement implements Initializable  {
     private TextField motifMedic;
 
     @FXML
-    private TextField nSecurité;
+    private TextField nSecurite;
 
     @FXML
     private TextField nbrEnfant;
@@ -225,7 +225,7 @@ public class Recrutement implements Initializable  {
 			System.out.println(id.get(compteur));
 			
 			
-			System.out.println(nomsGet+ "   à  l'id = "+id.get(compteur) );
+			System.out.println(nomsGet+ "   ï¿½  l'id = "+id.get(compteur) );
 			
 
 
@@ -253,13 +253,13 @@ public class Recrutement implements Initializable  {
     void MarieSelect(ActionEvent event) 
     {
 
-    	conjugal = "Marié(e)";
+    	conjugal = "Marie(e)";
     }
 
     @FXML
     void celibSelect(ActionEvent event) {
     	
-    	conjugal = "Célibataire";
+    	conjugal = "Celibataire";
 
     }
 
@@ -413,7 +413,7 @@ public class Recrutement implements Initializable  {
     	try {
     		pst = conn.prepareStatement(sql);
     		pst.setString(1,userID.getText());
-    		JOptionPane.showMessageDialog(null,"Supprimé");
+    		JOptionPane.showMessageDialog(null,"Supprimï¿½");
     		pst.execute();
     		
     		refresehTableDataProfiles();
@@ -507,7 +507,7 @@ public class Recrutement implements Initializable  {
 					pst = conn.prepareStatement(sql);
 					pst.execute();
 					
-					JOptionPane.showMessageDialog(null,"Mise à jour éffctué");
+					JOptionPane.showMessageDialog(null,"Mise Ã  jour Ã©ffctuÃ©");
 					
 					refresehTableDataProfiles();
 			

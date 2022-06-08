@@ -14,7 +14,7 @@ import module.dsi.userAccount;
 public class dsiData {
 	
 	
-	public static void getDernierEmployee() throws SQLException
+	public static boolean getDernierEmployee() throws SQLException
 	{
 		String query = "{ call dsi_table() }";
         ResultSet rs;
@@ -37,16 +37,19 @@ public class dsiData {
 					
 			}
             
+            return true;
+            
             
             	
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
+            return false;
         }
 	
 		
 	}
 
-	public static void getSecondEmployee() throws SQLException 
+	public static boolean getSecondEmployee() throws SQLException 
 	{
 		String query = "{ call dsi_table() }";
         ResultSet rs;
@@ -66,10 +69,13 @@ public class dsiData {
 					
 			}
             
+            return true;
+            
             
             	
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
+            return false;
         }
 	}
 	
