@@ -20,6 +20,8 @@ public class connectController extends Application{
 
 	public boolean fermePage = false;
 	
+	public static int  id ;
+	
 	
 	
 	/**
@@ -61,6 +63,7 @@ public class connectController extends Application{
      * Action sur le button se connecter  et attribution interface en fonction des role
      * @param event
      * @throws IOException
+     * @throws InterruptedException 
      */
     @FXML
     void OnConnect(ActionEvent event) throws IOException
@@ -74,11 +77,17 @@ public class connectController extends Application{
     	userAccount Connect = new userAccount(log,pass,null);
     	
     	
-    	if(/*Connect.EtablishConnexion()*/ true)
+    	
+    	if(Connect.EtablishConnexion())
     	{
-			/* String role = Connect.getRole(); */
     		
-    		String role = log;
+    		
+    		 
+    		 
+    		 
+			 String role = Connect.getRole();
+    		
+    	
     		
     		
     		 if (role.equals("CFO"))	

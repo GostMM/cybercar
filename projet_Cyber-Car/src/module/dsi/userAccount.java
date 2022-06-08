@@ -4,6 +4,8 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 
+import javafx.application.Platform;
+import javafx.scene.Scene;
 import jdbcconnection.dsiData;
 
 public class userAccount 
@@ -14,7 +16,7 @@ public class userAccount
 	private String Role;
 	private String Nom;
 	private String Prenom;
-	private String id ;
+	private static String id ;
 	
 	
 	
@@ -99,10 +101,22 @@ public class userAccount
 			 System.out.println(verification);
 			 
 			 
+			 
+			 
+			 
+			 
+			 
+
+		    	
+			 
+			
+			 
 			 if(verification == true) 
 			 {
-				 System.out.println("herrr");
 				 
+				 
+				 System.out.println("herrr");
+				
 				 System.out.println(id);
 				 
 				 
@@ -110,6 +124,8 @@ public class userAccount
 				 
 				 ArrayList<String> Profile;
 				try {
+					
+					
 					Profile = dsiData.UserConnexion(this.login,Integer.parseInt(id));
 					 System.out.println(Profile);
 					 this.Nom = Profile.get(0) ;
@@ -169,7 +185,10 @@ public class userAccount
 	}
 
 	public void setId(String id) {
+		
+		
 		this.id = id;
+	
 	}
 
 }
