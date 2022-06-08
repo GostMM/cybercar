@@ -27,10 +27,11 @@ import jdbcconnection.dsiData;
 import module.finance.Profiles;
 import module.finance.Vente;
 
+
 public class dsiController implements Initializable
 {
 
-
+// Arraylist = Tableau / list de donnée  
 	public static ArrayList<String> Name = new ArrayList<String>();
 	public static ArrayList<String> Fonction = new ArrayList<String>();
 	public static ArrayList<String> date = new ArrayList<String>() ;
@@ -54,7 +55,11 @@ public class dsiController implements Initializable
 
 	
 	
-	
+	/**
+	 * 
+	 * 
+	 *  element generé automatiquement sur scene builder  
+	 */
 	
     @FXML
     private TextField Noms;
@@ -108,6 +113,30 @@ public class dsiController implements Initializable
 
     @FXML
     private Button logOut;
+    
+    
+    
+    
+    
+    /**
+	 * 
+	 *  element generé automatiquement sur scene builder 
+	 *  
+	 *   
+	 *   
+	 */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
     int compteur = 0;
@@ -211,19 +240,25 @@ public class dsiController implements Initializable
        
 
     }
+    
+    
+    // fonction permettant d'afficher les 2 tableaux
+    
+    
+    
 
 	 void affichageTables()
 	 {
 		 
 		 
-		 ObservableList<TableUser>data1 = FXCollections.observableArrayList();
-		 ObservableList<TableUser>data2 = FXCollections.observableArrayList();
+		 ObservableList<TableUser>data1 = FXCollections.observableArrayList(); // ArrayList qui va contenir des objets 
+		 ObservableList<TableUser>data2 = FXCollections.observableArrayList(); 
 		 
 		 
 		 for(int i = 0;i<Fonction.size();i++)
 		 {
-			 data1.add(new TableUser(Name.get(i),Fonction.get(i),log.get(i),date.get(i)));
-			
+			 data1.add(new TableUser(Name.get(i),Fonction.get(i),log.get(i),date.get(i)));   // ici on insere les  objet de type TableUser par une boucle qui vas prendre les donnée stckée dans les arrayList Qui son au debut, 
+			 
 		 }
 		 for(int i = 0;i<Fonction1.size();i++)
 		 {
@@ -231,6 +266,9 @@ public class dsiController implements Initializable
 		 }
 		 
 		
+		 
+		 
+		 // ici on associe colone et donnée 
 		 
 		 nom.setCellValueFactory(new PropertyValueFactory<TableUser, String>("nom") );
 		 fonction.setCellValueFactory(new PropertyValueFactory<TableUser, String>("fonction"));
@@ -244,9 +282,16 @@ public class dsiController implements Initializable
 		 nouveauAncien1.setCellValueFactory(new PropertyValueFactory<TableUser, String>("status_Log"));
 		 
 		 
+		// ici on associe colone et donnée 
+		 
+		 
+		 
+		 // ici on insere les donnée recupéré et assignées au colone a leurs table pour l'a
 		 
 		 dataTable.setItems(data2);
 		 dataTable1.setItems(data1);
+		 
+		 
 		 
 		 
 		 

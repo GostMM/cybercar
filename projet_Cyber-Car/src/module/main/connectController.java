@@ -31,8 +31,7 @@ public class connectController extends Application{
 		
 		
 		
-		Process process = Runtime.getRuntime().exec("java --module-path    /Users/leroishai/Documents/cybercar/projet_Cyber-Car/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml -jar cybercar.jar"); 
-		System.out.println(process);
+		
 		
 		Parent authentification  = FXMLLoader.load(getClass().getResource("/module/finance/projet Fxml/connexion.fxml"));
 		Scene fenetre1  = new Scene(authentification);
