@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.gluonhq.charm.glisten.control.*?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
@@ -88,7 +89,7 @@
                               <Image url="@figma/input.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="logOut1" layoutX="41.0" layoutY="967.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="27.0" prefWidth="115.0" styleClass="btn" text="Se deconnecter" textFill="WHITE">
+                        <Button layoutX="41.0" layoutY="967.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="27.0" prefWidth="115.0" styleClass="btn" text="Se deconnecter" textFill="WHITE">
                            <font>
                               <Font name="Lato Heavy" size="13.0" />
                            </font>
@@ -110,7 +111,7 @@
                             <TableColumn fx:id="nom" prefWidth="173.3421630859375" text="Nom" />
                             <TableColumn fx:id="prenom" prefWidth="161.18414306640625" text="Prénom" />
                               <TableColumn fx:id="fonction" prefWidth="148.92095947265625" text="Fonction" />
-                              <TableColumn fx:id="nouveauAncien" prefWidth="145.731201171875" text="Nouveau/Ancien" />
+                              <TableColumn fx:id="nouveauAncien" prefWidth="145.731201171875" text="Status Login " />
                               <TableColumn fx:id="dateDarrivee" minWidth="3.69000244140625" prefWidth="178.07904052734375" text="Date d'arrivée" />
                           </columns>
                         </TableView>
@@ -119,7 +120,7 @@
                               <TableColumn fx:id="nom1" prefWidth="173.3421630859375" text="Nom" />
                               <TableColumn fx:id="prenom1" prefWidth="161.18414306640625" text="Prénom" />
                               <TableColumn fx:id="fonction1" prefWidth="148.92095947265625" text="Fonction" />
-                              <TableColumn fx:id="nouveauAncien1" prefWidth="145.731201171875" text="Nouveau/Ancien" />
+                              <TableColumn fx:id="nouveauAncien1" prefWidth="145.731201171875" text="Status  Login" />
                               <TableColumn fx:id="dateDarrivee1" minWidth="3.69000244140625" prefWidth="178.07904052734375" text="Date d'arrivée" />
                            </columns>
                         </TableView>
@@ -128,12 +129,12 @@
                               <Font name="Lato Heavy" size="15.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="52.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les nouveaux Arrivants ">
+                        <Text fill="WHITE" layoutX="52.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifiant à creer ">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="52.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les Anciens ">
+                        <Text fill="WHITE" layoutX="52.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifiant creer ">
                            <font>
                               <Font size="17.0" />
                            </font>
@@ -150,8 +151,8 @@
                            </font>
                         </Text>
                         <Text fill="#fffdfd" layoutX="6.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message du RH " />
-                        <TextArea layoutX="6.0" layoutY="162.0" prefHeight="88.0" prefWidth="192.0" />
-                        <Text fx:id="logDate1" fill="#ddcece" layoutX="8.0" layoutY="975.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dernierre Connexion  : 20/03/2022" wrappingWidth="186.52490234375" />
+                        <Text fx:id="logDate" fill="#ddcece" layoutX="8.0" layoutY="975.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dernierre Connexion  : 20/03/2022" wrappingWidth="186.52490234375" />
+                        <JFXTextArea focusColor="#d2ddff" layoutX="9.0" layoutY="167.0" prefHeight="81.0" prefWidth="171.0" style="-fx-background-color: white;" unFocusColor="WHITE" />
                      </children>
                   </Pane>
                </right>
@@ -198,7 +199,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <ImageView layoutX="11.0" layoutY="482.0">
+                        <ImageView layoutX="6.0" layoutY="482.0">
                            <image>
                               <Image url="@figma/Icon=Subnavigation.png" />
                            </image>
@@ -218,12 +219,12 @@
                               <Font name="Hiragino Sans W3" size="19.0" />
                            </font>
                         </Text>
-                        <Button fx:id="logOut" layoutX="30.0" layoutY="952.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="27.0" prefWidth="115.0" styleClass="btn" text="Se deconnecter" textFill="WHITE">
+                        <Button fx:id="logOut" layoutX="24.0" layoutY="905.0" mnemonicParsing="false" onAction="#onLogout" prefHeight="27.0" prefWidth="115.0" styleClass="btn" text="Se deconnecter" textFill="WHITE">
                            <font>
                               <Font name="Lato Heavy" size="13.0" />
                            </font>
                         </Button>
-                        <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="12.0" layoutY="952.0">
+                        <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="6.0" layoutY="905.0">
                            <image>
                               <Image url="@../../finance/projet%20Fxml/figma/settings_power.png" />
                            </image>
@@ -257,12 +258,12 @@
                         </GridPane>
                         <Pane layoutX="380.0" layoutY="259.0" prefHeight="626.0" prefWidth="521.0" styleClass="container">
                            <children>
-                              <TextField fx:id="identifiant" floatText="Identifiant" layoutX="140.0" layoutY="267.0" prefHeight="35.0" prefWidth="301.0">
+                              <TextField fx:id="identifiant" floatText="Identifiant" layoutX="112.0" layoutY="267.0" prefHeight="35.0" prefWidth="301.0">
                                  <padding>
                                     <Insets bottom="11.0" right="12.0" />
                                  </padding>
                               </TextField>
-                              <TextField fx:id="mdp" floatText="Mot de passe" layoutX="139.0" layoutY="304.0" prefHeight="35.0" prefWidth="303.0">
+                              <TextField fx:id="mdp" floatText="Mot de passe" layoutX="111.0" layoutY="313.0" prefHeight="35.0" prefWidth="303.0">
                                  <padding>
                                     <Insets bottom="11.0" right="12.0" />
                                  </padding>
@@ -277,14 +278,13 @@
                                     <Insets bottom="11.0" right="12.0" />
                                  </padding>
                               </TextField>
-                              <Button fx:id="validID" layoutX="200.0" layoutY="383.0" mnemonicParsing="false" onAction="#soumettre" prefHeight="25.0" prefWidth="181.0" styleClass="button1" text="valider " />
+                              <Button fx:id="validID" layoutX="170.0" layoutY="397.0" mnemonicParsing="false" onAction="#soumettre" prefHeight="25.0" prefWidth="181.0" styleClass="button1" text="valider " />
                               <TextField fx:id="Noms" floatText="Nom" layoutX="28.0" layoutY="66.0" prefHeight="35.0" prefWidth="468.0">
                                  <padding>
                                     <Insets bottom="11.0" right="12.0" />
                                  </padding>
                               </TextField>
-                              <Button layoutX="27.0" layoutY="473.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="205.0" styleClass="button-precedent" text="Precedent " />
-                              <Button layoutX="290.0" layoutY="473.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="205.0" styleClass="button-suivant" text="Suivant " />
+                              <Button layoutX="20.0" layoutY="517.0" mnemonicParsing="false" onAction="#onNext" prefHeight="27.0" prefWidth="481.0" styleClass="button-suivant" text="Parcourir la liste " />
                               <Text fill="WHITE" layoutX="8.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information Utilisateur " underline="true">
                                  <font>
                                     <Font name="Baghdad Regular" size="14.0" />
@@ -316,7 +316,7 @@
                <right>
                   <Pane prefHeight="200.0" prefWidth="200.0" styleClass="paniSide" BorderPane.alignment="CENTER">
                      <children>
-                        <Text fx:id="logDate" fill="#ddcece" layoutX="6.0" layoutY="960.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dernierre Connexion  : 20/03/2022" wrappingWidth="186.52490234375" />
+                        <Text fx:id="logDate" fill="#ddcece" layoutX="6.0" layoutY="893.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dernierre Connexion  : 20/03/2022" wrappingWidth="186.52490234375" />
                         <ImageView fitHeight="96.0" fitWidth="97.0" layoutX="52.0" layoutY="49.0">
                            <image>
                               <Image url="@figma/219986.png" />

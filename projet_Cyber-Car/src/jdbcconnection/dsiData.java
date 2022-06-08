@@ -16,22 +16,24 @@ public class dsiData {
 	
 	public static boolean getDernierEmployee() throws SQLException
 	{
-		String query = "{ call dsi_table() }";
+		String query = "{ call dsi_table1() }";
         ResultSet rs;
 
         try (Connection conn = ConnectoDataBase.getConnection();
                 CallableStatement stmt = conn.prepareCall(query))
         {
             rs = stmt.executeQuery();
-            if (rs.next())
+             while(rs.next())
             
             {
 				
-				
-				dsiController.setName(rs.getString("Nom"));
-				dsiController.setFonction(rs.getString("Fonction"));
-				dsiController.setDate(rs.getString("date_embauche"));
-				dsiController.setId(rs.getString("id"));
+            	
+            	dsiController.Name.add(rs.getString("Nom"));
+            	dsiController.Fonction.add(rs.getString("Fonction"));
+            	dsiController.date.add(rs.getString("date_embauche"));
+            	dsiController.log.add(rs.getString("have_Log"));
+            	dsiController.id.add(rs.getString("id"));
+            	
 				
 				
 					
@@ -48,24 +50,32 @@ public class dsiData {
 	
 		
 	}
+	
+	
+	
+	
+	
+	
 
 	public static boolean getSecondEmployee() throws SQLException 
 	{
-		String query = "{ call dsi_table() }";
+		String query = "{ call dsi_table2() }";
         ResultSet rs;
 
         try (Connection conn = ConnectoDataBase.getConnection();
                 CallableStatement stmt = conn.prepareCall(query))
         {
             rs = stmt.executeQuery();
-            if (rs.next())
-            
-            {
+            while(rs.next()){
 				
 				
-				dsiController.setName(rs.getString("Nom"));
-				dsiController.setFonction(rs.getString("Fonction"));
-				dsiController.setDate(rs.getString("date_embauche"));
+            	dsiController.Name1.add(rs.getString("Nom"));
+            	dsiController.Fonction1.add(rs.getString("Fonction"));
+            	dsiController.date1.add(rs.getString("date_embauche"));
+            	dsiController.log1.add(rs.getString("have_Log"));
+            	dsiController.id1.add(rs.getString("id"));
+            	
+            	
 					
 			}
             
