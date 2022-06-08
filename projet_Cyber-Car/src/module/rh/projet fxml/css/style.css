@@ -1,3 +1,115 @@
+
+.default-color0.chart-pie { -fx-pie-color: #ffd700; }
+.default-color1.chart-pie { -fx-pie-color: #ffa500; }
+.default-color2.chart-pie { -fx-pie-color: #860061; }
+.default-color3.chart-pie { -fx-pie-color: #adff2f; }
+.default-color4.chart-pie { -fx-pie-color: #ff5700; }
+
+
+.centre 
+{ 
+    -fx-background-color: rgba(46, 11, 7, 0.417);
+    -fx-border-color:white;
+    -fx-border-radius: 12px;
+    -fx-background-radius:12px
+
+}
+
+.button-suivant
+{
+    -fx-background-color: yellow;
+    -fx-border-color: white;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+
+}
+
+
+.button-precedent
+{
+    -fx-background-color: rgb(57, 255, 245);
+    -fx-border-color: white;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+
+}
+
+
+.button-precedent :pressed 
+{	
+
+   -fx-background-color: rgba(255, 255, 255, 0.596);
+
+}
+
+.button-suivant:pressed
+{	
+ -fx-background-color: rgba(255, 255, 255, 0.596);
+}
+
+
+.container
+{
+    -fx-background-color: rgba(52, 47, 47, 0.448);
+    -fx-border-color: white;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+ 
+.chart-pie-label-line {
+    -fx-stroke: #d1c6c6;
+    -fx-fill: #fff5ee;
+}
+ 
+.chart-pie-label {
+    -fx-fill: #ffffff;
+    -fx-font-size: 1em;
+} 
+.chart-title
+{
+     -fx-stroke: #d1c6c6;
+    -fx-fill: #fff5ee;;
+}
+.chart-legend {
+   -fx-background-color:  #ffd5f58a;
+   -fx-stroke: #fbfbfb;
+}
+
+.graph
+{
+
+    -fx-background-color:#790c635e;
+    -fx-background-radius : 20px 20px;
+    -fx-text-fill : white;
+    -fx-border-radius : 20px 20px;
+    -fx-border-color : white;
+}
+
+.menu{
+    -fx-background-color : rgba(255, 255, 255, 0.629) !important;
+   
+    
+    -fx-text-fill : white;
+    -fx-border-color : rgb(255, 200, 113);
+    -fx-background-radius : 20px 20px;
+    -fx-border-radius : 20px 20px;
+
+
+}
+
+.marque
+{
+    -fx-background-color:rgba(140, 142, 135, 0.879);
+    -fx-background-radius: 20px 20px;
+    -fx-border-color:white;
+    -fx-border-radius : 20px 20px ;
+}
+.fond
+{
+    
+    -fx-background-color: linear-gradient(to right,rgb(41, 35, 57),rgb(25, 30, 84),rgb(21, 7, 91),rgb(65, 4, 70),rgb(0, 36, 52),rgb(38, 38, 38));
+}
+
 .paneRadius
 {
     -fx-background-color : rgb(76, 168, 214);
@@ -27,11 +139,21 @@
   }
 
 .paneBoard{
-    -fx-background-color:linear-gradient(to right,rgba(76, 18, 163, 0.549),rgba(0, 0, 0, 0.551),black);
-
-    
+    -fx-background-color:linear-gradient(to right,rgba(0, 71, 22, 0.296),rgba(0, 0, 0, 0.551),black);
     -fx-background-radius : 0px 20px 20px 0px;
+    -fx-border-radius : 0px 20px 20px 0px;
+    -fx-border-color : white;
 }
+
+.paniSide
+{
+    -fx-background-color:linear-gradient(to right,rgba(132, 96, 96, 0.289),rgba(83, 0, 0, 0.551),rgb(53, 29, 124));
+    -fx-background-radius : 20px 0px 0px 20px;
+    -fx-border-radius : 20px 0px 0px 20px;
+
+    -fx-border-color : white;
+}
+
 
 .reponse
 {
@@ -56,8 +178,7 @@
 .btn:hover
 {
  
-     -fx-background-color :rgb(8, 145, 230);
-     -fx-background-radius: 10px 10px 5px 5px ;
+     -fx-background-color :rgb(126, 65, 0);
      -fx-transform:all 90s ease-in-out
 
 }
@@ -82,4 +203,10 @@
 {
     -fx-background-color : white !important;
     -fx-text-fill : black !important
+}
+
+.table{
+    -fx-background-color:linear-gradient(to right,rgba(0, 71, 22, 0.296),rgba(0, 0, 0, 0.551),black);
+    -fx-background-radius: 0px 0px 0px 20px;
+    -fx-border-radius : 0px 0px 0px 20px;
 }

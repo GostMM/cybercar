@@ -2,13 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1463cdb6-86a1-4fea-b606-fadc84eb80d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/projet_Cyber-Car/src/admin/finance/controllerAchat.java" beforeDir="false" afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/admin/finance/controllerAchat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet_Cyber-Car/src/admin/finance/projet Fxml/2-achat-voiture.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/projet_Cyber-Car/src/admin/finance/projet Fxml/2-achat-voiture.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RessourceHumaine/DBConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet_Cyber-Car/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/projet_Cyber-Car/.classpath" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -21,13 +30,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/projet_Cyber-Car/src/RessourceHumaine" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\El Nadje\OneDrive\Documents\BTS SIO\Ap4.cybercar\projet_Cyber-Car\src\RessourceHumaine" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\El Nadje\OneDrive\Documents\BTS SIO\Ap4.cybercar\projet_Cyber-Car\src\RessourcesHumaine" />
+      <recent name="C:\Users\El Nadje\OneDrive\Documents\BTS SIO\Ap4.cybercar\projet_Cyber-Car" />
+      <recent name="C:\Users\El Nadje\OneDrive\Documents\BTS SIO\Ap4.cybercar\projet_Cyber-Car\src\RessourceHumaine" />
+      <recent name="C:\Users\El Nadje\OneDrive\Documents\BTS SIO\Ap4.cybercar\RessourceHumaine\rh\R-H\File_FXML" />
+      <recent name="C:\Users\El Nadje\OneDrive\Documents\BTS SIO\Ap4.cybercar\RessourceHumaine\rh" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.recrutement3">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="RessourceHumaine.ResourceHumaine" />
+      <module name="cybercar" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files (x86)\Java\javafx-sdk-18.0.1\lib&quot;     --add-modules=javafx.base,javafx.controls,javafx.graphics,javafx.media" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="recrutement3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="recrutement3" />
+      <module name="cybercar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.recrutement3" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.recrutement3" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,9 +88,39 @@
       <updated>1650361276512</updated>
       <workItem from="1650361284756" duration="61000" />
     </task>
+    <task id="LOCAL-00001" summary="Projet CyberCar Department RH">
+      <created>1650632949255</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650632949255</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Projet CyberCar Department RH">
+      <created>1650659057576</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650659057576</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Projet CyberCar Department RH">
+      <created>1650660124877</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650660124877</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Projet CyberCar Department RH" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projet CyberCar Department RH" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
